@@ -10,6 +10,12 @@
 		CA0CEA6F1A8A877200DF93E9 /* THGDispatch.h in Headers */ = {isa = PBXBuildFile; fileRef = CA0CEA6E1A8A877200DF93E9 /* THGDispatch.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CA0CEA751A8A877200DF93E9 /* THGDispatch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA0CEA691A8A877200DF93E9 /* THGDispatch.framework */; };
 		CA0CEA7C1A8A877200DF93E9 /* THGDispatchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0CEA7B1A8A877200DF93E9 /* THGDispatchTests.swift */; };
+		CA0CEA861A8A8B0D00DF93E9 /* DispatchQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0CEA851A8A8B0D00DF93E9 /* DispatchQueue.swift */; };
+		CA32AD861A91C5FF002FD1B9 /* DispatchGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA32AD851A91C5FF002FD1B9 /* DispatchGroup.swift */; };
+		CA32AD8B1A91DEBF002FD1B9 /* NSBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA32AD8A1A91DEBF002FD1B9 /* NSBundle.swift */; };
+		CA32AD8D1A91E2F1002FD1B9 /* NSBundleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA32AD8C1A91E2F0002FD1B9 /* NSBundleTests.swift */; };
+		CA58B25D1A91B08800C4B93E /* DispatchTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA58B25C1A91B08800C4B93E /* DispatchTimer.swift */; };
+		CA58B25F1A91B1C000C4B93E /* DispatchClosure.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA58B25E1A91B1C000C4B93E /* DispatchClosure.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +35,12 @@
 		CA0CEA741A8A877200DF93E9 /* THGDispatchTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = THGDispatchTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA0CEA7A1A8A877200DF93E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CA0CEA7B1A8A877200DF93E9 /* THGDispatchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = THGDispatchTests.swift; sourceTree = "<group>"; };
+		CA0CEA851A8A8B0D00DF93E9 /* DispatchQueue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DispatchQueue.swift; sourceTree = "<group>"; };
+		CA32AD851A91C5FF002FD1B9 /* DispatchGroup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DispatchGroup.swift; sourceTree = "<group>"; };
+		CA32AD8A1A91DEBF002FD1B9 /* NSBundle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSBundle.swift; sourceTree = "<group>"; };
+		CA32AD8C1A91E2F0002FD1B9 /* NSBundleTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSBundleTests.swift; sourceTree = "<group>"; };
+		CA58B25C1A91B08800C4B93E /* DispatchTimer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DispatchTimer.swift; sourceTree = "<group>"; };
+		CA58B25E1A91B1C000C4B93E /* DispatchClosure.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DispatchClosure.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +84,11 @@
 			isa = PBXGroup;
 			children = (
 				CA0CEA6E1A8A877200DF93E9 /* THGDispatch.h */,
+				CA32AD8A1A91DEBF002FD1B9 /* NSBundle.swift */,
+				CA0CEA851A8A8B0D00DF93E9 /* DispatchQueue.swift */,
+				CA58B25E1A91B1C000C4B93E /* DispatchClosure.swift */,
+				CA32AD851A91C5FF002FD1B9 /* DispatchGroup.swift */,
+				CA58B25C1A91B08800C4B93E /* DispatchTimer.swift */,
 				CA0CEA6C1A8A877200DF93E9 /* Supporting Files */,
 			);
 			path = THGDispatch;
@@ -89,6 +106,7 @@
 			isa = PBXGroup;
 			children = (
 				CA0CEA7B1A8A877200DF93E9 /* THGDispatchTests.swift */,
+				CA32AD8C1A91E2F0002FD1B9 /* NSBundleTests.swift */,
 				CA0CEA791A8A877200DF93E9 /* Supporting Files */,
 			);
 			path = THGDispatchTests;
@@ -209,6 +227,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CA32AD8B1A91DEBF002FD1B9 /* NSBundle.swift in Sources */,
+				CA0CEA861A8A8B0D00DF93E9 /* DispatchQueue.swift in Sources */,
+				CA58B25D1A91B08800C4B93E /* DispatchTimer.swift in Sources */,
+				CA58B25F1A91B1C000C4B93E /* DispatchClosure.swift in Sources */,
+				CA32AD861A91C5FF002FD1B9 /* DispatchGroup.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -216,6 +239,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CA32AD8D1A91E2F1002FD1B9 /* NSBundleTests.swift in Sources */,
 				CA0CEA7C1A8A877200DF93E9 /* THGDispatchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -321,6 +345,7 @@
 		CA0CEA801A8A877200DF93E9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -330,12 +355,14 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		CA0CEA811A8A877200DF93E9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -397,6 +424,7 @@
 				CA0CEA811A8A877200DF93E9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CA0CEA821A8A877200DF93E9 /* Build configuration list for PBXNativeTarget "THGDispatchTests" */ = {
 			isa = XCConfigurationList;
@@ -405,6 +433,7 @@
 				CA0CEA841A8A877200DF93E9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
