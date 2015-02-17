@@ -35,7 +35,7 @@ public struct DispatchClosure {
         return result == 0
     }
     
-    public func closure() -> dispatch_block_t {
+    public func dispatchClosure() -> dispatch_block_t {
         return rawObject
     }
     
