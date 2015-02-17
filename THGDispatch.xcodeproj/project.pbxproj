@@ -7,13 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		001EC91A1A92AC15007BC6C4 /* DispatchSemaphore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001EC9191A92AC15007BC6C4 /* DispatchSemaphore.swift */; };
+		001EC91E1A92D437007BC6C4 /* THGDispatchSemaphoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001EC91D1A92D437007BC6C4 /* THGDispatchSemaphoreTests.swift */; };
 		CA0CEA6F1A8A877200DF93E9 /* THGDispatch.h in Headers */ = {isa = PBXBuildFile; fileRef = CA0CEA6E1A8A877200DF93E9 /* THGDispatch.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CA0CEA751A8A877200DF93E9 /* THGDispatch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA0CEA691A8A877200DF93E9 /* THGDispatch.framework */; };
 		CA0CEA7C1A8A877200DF93E9 /* THGDispatchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0CEA7B1A8A877200DF93E9 /* THGDispatchTests.swift */; };
 		CA0CEA861A8A8B0D00DF93E9 /* DispatchQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0CEA851A8A8B0D00DF93E9 /* DispatchQueue.swift */; };
 		CA32AD861A91C5FF002FD1B9 /* DispatchGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA32AD851A91C5FF002FD1B9 /* DispatchGroup.swift */; };
 		CA32AD8B1A91DEBF002FD1B9 /* NSBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA32AD8A1A91DEBF002FD1B9 /* NSBundle.swift */; };
-		CA32AD8D1A91E2F1002FD1B9 /* NSBundleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA32AD8C1A91E2F0002FD1B9 /* NSBundleTests.swift */; };
 		CA58B25D1A91B08800C4B93E /* DispatchTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA58B25C1A91B08800C4B93E /* DispatchTimer.swift */; };
 		CA58B25F1A91B1C000C4B93E /* DispatchClosure.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA58B25E1A91B1C000C4B93E /* DispatchClosure.swift */; };
 /* End PBXBuildFile section */
@@ -29,6 +30,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		001EC9191A92AC15007BC6C4 /* DispatchSemaphore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DispatchSemaphore.swift; sourceTree = "<group>"; };
+		001EC91D1A92D437007BC6C4 /* THGDispatchSemaphoreTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = THGDispatchSemaphoreTests.swift; sourceTree = "<group>"; };
 		CA0CEA691A8A877200DF93E9 /* THGDispatch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = THGDispatch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA0CEA6D1A8A877200DF93E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CA0CEA6E1A8A877200DF93E9 /* THGDispatch.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = THGDispatch.h; sourceTree = "<group>"; };
@@ -38,7 +41,6 @@
 		CA0CEA851A8A8B0D00DF93E9 /* DispatchQueue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DispatchQueue.swift; sourceTree = "<group>"; };
 		CA32AD851A91C5FF002FD1B9 /* DispatchGroup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DispatchGroup.swift; sourceTree = "<group>"; };
 		CA32AD8A1A91DEBF002FD1B9 /* NSBundle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSBundle.swift; sourceTree = "<group>"; };
-		CA32AD8C1A91E2F0002FD1B9 /* NSBundleTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSBundleTests.swift; sourceTree = "<group>"; };
 		CA58B25C1A91B08800C4B93E /* DispatchTimer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DispatchTimer.swift; sourceTree = "<group>"; };
 		CA58B25E1A91B1C000C4B93E /* DispatchClosure.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DispatchClosure.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -89,6 +91,7 @@
 				CA58B25E1A91B1C000C4B93E /* DispatchClosure.swift */,
 				CA32AD851A91C5FF002FD1B9 /* DispatchGroup.swift */,
 				CA58B25C1A91B08800C4B93E /* DispatchTimer.swift */,
+				001EC9191A92AC15007BC6C4 /* DispatchSemaphore.swift */,
 				CA0CEA6C1A8A877200DF93E9 /* Supporting Files */,
 			);
 			path = THGDispatch;
@@ -106,7 +109,7 @@
 			isa = PBXGroup;
 			children = (
 				CA0CEA7B1A8A877200DF93E9 /* THGDispatchTests.swift */,
-				CA32AD8C1A91E2F0002FD1B9 /* NSBundleTests.swift */,
+				001EC91D1A92D437007BC6C4 /* THGDispatchSemaphoreTests.swift */,
 				CA0CEA791A8A877200DF93E9 /* Supporting Files */,
 			);
 			path = THGDispatchTests;
@@ -227,6 +230,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				001EC91A1A92AC15007BC6C4 /* DispatchSemaphore.swift in Sources */,
 				CA32AD8B1A91DEBF002FD1B9 /* NSBundle.swift in Sources */,
 				CA0CEA861A8A8B0D00DF93E9 /* DispatchQueue.swift in Sources */,
 				CA58B25D1A91B08800C4B93E /* DispatchTimer.swift in Sources */,
@@ -239,7 +243,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CA32AD8D1A91E2F1002FD1B9 /* NSBundleTests.swift in Sources */,
+				001EC91E1A92D437007BC6C4 /* THGDispatchSemaphoreTests.swift in Sources */,
 				CA0CEA7C1A8A877200DF93E9 /* THGDispatchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
