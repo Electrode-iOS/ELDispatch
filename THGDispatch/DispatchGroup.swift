@@ -48,11 +48,11 @@ public struct DispatchGroup {
     public func leave() {
         dispatch_group_leave(rawObject)
     }
-    */
+
     
     public func dispatchGroup() -> dispatch_group_t {
         return rawObject
-    }
+    }*/
     
     private let rawObject: dispatch_group_t
 }
