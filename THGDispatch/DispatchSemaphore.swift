@@ -9,16 +9,24 @@
 import Foundation
 
 public struct DispatchSemaphore {
-    
-    public init (initialValue: Int) {
+
+    public init(initialValue: Int) {
         rawObject = dispatch_semaphore_create(initialValue)
     }
     
-    public func wait () {
+    public func wait() {
         dispatch_semaphore_wait(rawObject, DISPATCH_TIME_FOREVER)
     }
     
-    public func signal () {
+    public func wait(timeout: NSTimeInterval) -> Bool {
+        let dispatchTimeout = dispatch_time(DISPATCH_TIME_NOW, Int64(timeout * NSTimeInterval(NSEC_PER_SEC)))
+        
+        // result == 1 if it was a success, 0 if it timed out.
+        let result = dispatch_semaphore_wait(rawObject, dispatchTimeout)
+        return result == 0
+    }
+    
+    public func signal() {
         dispatch_semaphore_signal(rawObject)
     }
     
