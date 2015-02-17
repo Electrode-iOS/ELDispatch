@@ -18,9 +18,9 @@ class THGDispatchSemaphoreTests: XCTestCase {
     // Lastly, make sure that all expectations were met
     func testTripleUsage () {
         
-        let expectation1 = expectationWithDescription("First semaphore signalled")
-        let expectation2 = expectationWithDescription("Second semaphore signalled")
-        let expectation3 = expectationWithDescription("Third semaphore signalled")
+        let expectation1 = expectationWithDescription("First semaphore signaled")
+        let expectation2 = expectationWithDescription("Second semaphore signaled")
+        let expectation3 = expectationWithDescription("Third semaphore signaled")
         
         let semaphore = DispatchSemaphore(initialValue: 2)
         
