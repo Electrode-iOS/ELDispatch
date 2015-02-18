@@ -3,7 +3,7 @@
 //  THGDispatch
 //
 //  Created by Brandon Sneed on 2/15/15.
-//  Copyright (c) 2015 TheHolyGrail. All rights reserved.
+//  Copyright (c) 2015 Walmart. All rights reserved.
 //
 
 import Foundation
@@ -40,19 +40,9 @@ public struct DispatchGroup {
         return result == 0
     }
     
-    /* Not sure we want these.
-    public func enter() {
-        dispatch_group_enter(rawObject)
-    }
-    
-    public func leave() {
-        dispatch_group_leave(rawObject)
-    }
-
-    
     public func dispatchGroup() -> dispatch_group_t {
         return rawObject
-    }*/
+    }
     
     private let rawObject: dispatch_group_t
 }
