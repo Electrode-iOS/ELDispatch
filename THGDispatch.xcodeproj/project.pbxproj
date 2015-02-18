@@ -17,6 +17,7 @@
 		CA32AD8B1A91DEBF002FD1B9 /* NSBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA32AD8A1A91DEBF002FD1B9 /* NSBundle.swift */; };
 		CA58B25D1A91B08800C4B93E /* DispatchTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA58B25C1A91B08800C4B93E /* DispatchTimer.swift */; };
 		CA58B25F1A91B1C000C4B93E /* DispatchClosure.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA58B25E1A91B1C000C4B93E /* DispatchClosure.swift */; };
+		CACF29AE1A9554660084EFAE /* Dispatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = CACF29AD1A9554660084EFAE /* Dispatch.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +44,7 @@
 		CA32AD8A1A91DEBF002FD1B9 /* NSBundle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSBundle.swift; sourceTree = "<group>"; };
 		CA58B25C1A91B08800C4B93E /* DispatchTimer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DispatchTimer.swift; sourceTree = "<group>"; };
 		CA58B25E1A91B1C000C4B93E /* DispatchClosure.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DispatchClosure.swift; sourceTree = "<group>"; };
+		CACF29AD1A9554660084EFAE /* Dispatch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dispatch.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +89,7 @@
 			children = (
 				CA0CEA6E1A8A877200DF93E9 /* THGDispatch.h */,
 				CA32AD8A1A91DEBF002FD1B9 /* NSBundle.swift */,
+				CACF29AD1A9554660084EFAE /* Dispatch.swift */,
 				CA0CEA851A8A8B0D00DF93E9 /* DispatchQueue.swift */,
 				CA58B25E1A91B1C000C4B93E /* DispatchClosure.swift */,
 				CA32AD851A91C5FF002FD1B9 /* DispatchGroup.swift */,
@@ -236,6 +239,7 @@
 				CA58B25D1A91B08800C4B93E /* DispatchTimer.swift in Sources */,
 				CA58B25F1A91B1C000C4B93E /* DispatchClosure.swift in Sources */,
 				CA32AD861A91C5FF002FD1B9 /* DispatchGroup.swift in Sources */,
+				CACF29AE1A9554660084EFAE /* Dispatch.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

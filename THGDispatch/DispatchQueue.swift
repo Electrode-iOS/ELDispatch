@@ -40,51 +40,23 @@ public enum DispatchQueue {
             return dispatch_get_main_queue()
             
         case .Background:
-            return dispatch_get_global_queue(Int(QOS_CLASS_BACKGROUND.value), 0)
+            return dispatch_get_global_queue(QOS_CLASS_BACKGROUND, 0)
 
         case .UserInteractive:
-            return dispatch_get_global_queue(Int(QOS_CLASS_USER_INTERACTIVE.value), 0)
+            return dispatch_get_global_queue(QOS_CLASS_USER_INTERACTIVE, 0)
         
         case .UserInitiated:
-            return dispatch_get_global_queue(Int(QOS_CLASS_USER_INITIATED.value), 0)
+            return dispatch_get_global_queue(QOS_CLASS_USER_INITIATED, 0)
         
         case .Default:
-            return dispatch_get_global_queue(Int(QOS_CLASS_DEFAULT.value), 0)
+            return dispatch_get_global_queue(QOS_CLASS_DEFAULT, 0)
         
         case .Utility:
-            return dispatch_get_global_queue(Int(QOS_CLASS_UTILITY.value), 0)
+            return dispatch_get_global_queue(QOS_CLASS_UTILITY, 0)
             
         case .Custom(let rawObject):
             return rawObject
         }
-    }
-    
-    public func async(closure: () -> Void) -> DispatchClosure {
-        let wrappedClosure = DispatchClosure(closure)
-        let queue = dispatchQueue()
-        dispatch_async(dispatchQueue(), wrappedClosure.dispatchClosure())
-        return wrappedClosure
-    }
-    
-    public func sync(closure: () -> Void) -> DispatchClosure {
-        let wrappedClosure = DispatchClosure(closure)
-        let queue = dispatchQueue()
-        dispatch_sync(dispatchQueue(), wrappedClosure.dispatchClosure())
-        return wrappedClosure
-    }
-    
-    public func barrierAsync(closure: () -> Void) -> DispatchClosure {
-        let wrappedClosure = DispatchClosure(closure)
-        let queue = dispatchQueue()
-        dispatch_barrier_async(dispatchQueue(), wrappedClosure.dispatchClosure())
-        return wrappedClosure
-    }
-    
-    public func barrierSync(closure: () -> Void) -> DispatchClosure {
-        let wrappedClosure = DispatchClosure(closure)
-        let queue = dispatchQueue()
-        dispatch_barrier_sync(dispatchQueue(), wrappedClosure.dispatchClosure())
-        return wrappedClosure
     }
     
     private static func customQueue(label: String, concurrent: Bool, targetQueue: DispatchQueue?) -> DispatchQueue {

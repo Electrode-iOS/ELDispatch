@@ -24,21 +24,21 @@ class THGDispatchSemaphoreTests: XCTestCase {
         
         let semaphore = DispatchSemaphore(initialValue: 2)
         
-        DispatchQueue.Background.async {
+        Dispatch().async(.Background) {
             semaphore.wait()
             sleep(2)
             expectation1.fulfill()
             semaphore.signal()
         }
         
-        DispatchQueue.Background.async {
+        Dispatch().async(.Background) {
             semaphore.wait()
             sleep(2)
             expectation2.fulfill()
             semaphore.signal()
         }
         
-        DispatchQueue.Background.async {
+        Dispatch().async(.Background) {
             semaphore.wait()
             sleep(2)
             expectation3.fulfill()

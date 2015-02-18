@@ -26,7 +26,7 @@ class THGDispatchTests: XCTestCase {
         
         let expectation1 = self.expectationWithDescription("block gets executed")
         
-        DispatchQueue.Background.async {
+        Dispatch().async(.Background) {
             expectation1.fulfill()
         }
         
@@ -37,7 +37,7 @@ class THGDispatchTests: XCTestCase {
         
         let expectation1: XCTestExpectation = self.expectationWithDescription("block gets executed")
         
-        DispatchQueue.Background.async {
+        Dispatch().async(.Background) {
             // sleep longer than the waitForExpectationsWithTimeout does.
             sleep(3)
             expectation1.fulfill()
@@ -52,7 +52,7 @@ class THGDispatchTests: XCTestCase {
         let expectation1: XCTestExpectation = self.expectationWithDescription("block gets executed")
         let expectation2: XCTestExpectation = self.expectationWithDescription("main thread was notified")
         
-        DispatchQueue.Background.async {
+        Dispatch().async(.Background) {
             expectation1.fulfill()
         }.notify(.Main) {
             XCTAssertTrue(NSThread.isMainThread())
@@ -67,7 +67,7 @@ class THGDispatchTests: XCTestCase {
         let expectation1: XCTestExpectation = self.expectationWithDescription("block gets executed")
         let expectation2: XCTestExpectation = self.expectationWithDescription("main thread was notified")
         
-        DispatchQueue.Background.sync {
+        Dispatch().sync(.Background) {
             // sleep longer than the waitForExpectationsWithTimeout does.
             sleep(3)
             expectation1.fulfill()
