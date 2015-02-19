@@ -145,7 +145,13 @@ class THGDispatchTests: XCTestCase {
         self.waitForExpectationsWithTimeout(2, handler: nil)
     }
     
-    func testSerialQueue() {
+    /*func testSuspendFailure() {
+        let queue = DispatchQueue.Background
+        
+        XCTAssertThrows(Dispatch().suspend(queue), "The queue should throw an assertion if it's attempting to suspend a default queue!")
+    }*/
+    
+    /*func testSerialQueue() {
         let serialQueue = DispatchQueue.createSerial("blah")
-    }
+    }*/
 }
