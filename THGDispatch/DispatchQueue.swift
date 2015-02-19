@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import THGFoundation
 
 public enum DispatchQueue {
     
