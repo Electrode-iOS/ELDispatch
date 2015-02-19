@@ -77,6 +77,7 @@ public enum DispatchQueue {
 
 @objc public class THGDispatch {
     init() {
-        assertionFailure("Do not instantiate this!")
+        // using this because i want this thing to cry bloody murder if it's instantiated.
+        assertionFailure("Do not instantiate THGDispatch!")
     }
 }
