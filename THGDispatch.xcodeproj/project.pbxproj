@@ -18,6 +18,8 @@
 		CA58B25D1A91B08800C4B93E /* DispatchTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA58B25C1A91B08800C4B93E /* DispatchTimer.swift */; };
 		CA58B25F1A91B1C000C4B93E /* DispatchClosure.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA58B25E1A91B1C000C4B93E /* DispatchClosure.swift */; };
 		CACF29AE1A9554660084EFAE /* Dispatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = CACF29AD1A9554660084EFAE /* Dispatch.swift */; };
+		CACF29FE1A9614930084EFAE /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = CACF29FC1A9614930084EFAE /* LICENSE */; };
+		CACF29FF1A9614930084EFAE /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = CACF29FD1A9614930084EFAE /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +47,8 @@
 		CA58B25C1A91B08800C4B93E /* DispatchTimer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DispatchTimer.swift; sourceTree = "<group>"; };
 		CA58B25E1A91B1C000C4B93E /* DispatchClosure.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DispatchClosure.swift; sourceTree = "<group>"; };
 		CACF29AD1A9554660084EFAE /* Dispatch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dispatch.swift; sourceTree = "<group>"; };
+		CACF29FC1A9614930084EFAE /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		CACF29FD1A9614930084EFAE /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +73,8 @@
 		CA0CEA5F1A8A877200DF93E9 = {
 			isa = PBXGroup;
 			children = (
+				CACF29FC1A9614930084EFAE /* LICENSE */,
+				CACF29FD1A9614930084EFAE /* README.md */,
 				CA0CEA6B1A8A877200DF93E9 /* THGDispatch */,
 				CA0CEA781A8A877200DF93E9 /* THGDispatchTests */,
 				CA0CEA6A1A8A877200DF93E9 /* Products */,
@@ -183,7 +189,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0630;
-				ORGANIZATIONNAME = Walmart;
+				ORGANIZATIONNAME = TheHolyGrail;
 				TargetAttributes = {
 					CA0CEA681A8A877200DF93E9 = {
 						CreatedOnToolsVersion = 6.3;
@@ -216,6 +222,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CACF29FE1A9614930084EFAE /* LICENSE in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -239,6 +246,7 @@
 				CA58B25D1A91B08800C4B93E /* DispatchTimer.swift in Sources */,
 				CA58B25F1A91B1C000C4B93E /* DispatchClosure.swift in Sources */,
 				CA32AD861A91C5FF002FD1B9 /* DispatchGroup.swift in Sources */,
+				CACF29FF1A9614930084EFAE /* README.md in Sources */,
 				CACF29AE1A9554660084EFAE /* Dispatch.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
