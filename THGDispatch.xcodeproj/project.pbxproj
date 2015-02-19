@@ -19,7 +19,6 @@
 		CA58B25F1A91B1C000C4B93E /* DispatchClosure.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA58B25E1A91B1C000C4B93E /* DispatchClosure.swift */; };
 		CACF29AE1A9554660084EFAE /* Dispatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = CACF29AD1A9554660084EFAE /* Dispatch.swift */; };
 		CACF29FE1A9614930084EFAE /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = CACF29FC1A9614930084EFAE /* LICENSE */; };
-		CACF29FF1A9614930084EFAE /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = CACF29FD1A9614930084EFAE /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -246,7 +245,6 @@
 				CA58B25D1A91B08800C4B93E /* DispatchTimer.swift in Sources */,
 				CA58B25F1A91B1C000C4B93E /* DispatchClosure.swift in Sources */,
 				CA32AD861A91C5FF002FD1B9 /* DispatchGroup.swift in Sources */,
-				CACF29FF1A9614930084EFAE /* README.md in Sources */,
 				CACF29AE1A9554660084EFAE /* Dispatch.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
