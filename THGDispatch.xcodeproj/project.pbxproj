@@ -16,6 +16,7 @@
 		CA32AD861A91C5FF002FD1B9 /* DispatchGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA32AD851A91C5FF002FD1B9 /* DispatchGroup.swift */; };
 		CA58B25D1A91B08800C4B93E /* DispatchTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA58B25C1A91B08800C4B93E /* DispatchTimer.swift */; };
 		CA58B25F1A91B1C000C4B93E /* DispatchClosure.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA58B25E1A91B1C000C4B93E /* DispatchClosure.swift */; };
+		CA88043D1A96310D00C00CAE /* XCTestCase+Exceptions.m in Sources */ = {isa = PBXBuildFile; fileRef = CA88043C1A96310D00C00CAE /* XCTestCase+Exceptions.m */; };
 		CACF29AE1A9554660084EFAE /* Dispatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = CACF29AD1A9554660084EFAE /* Dispatch.swift */; };
 		CACF29FE1A9614930084EFAE /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = CACF29FC1A9614930084EFAE /* LICENSE */; };
 		CACF2A3E1A9623D80084EFAE /* THGFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CACF2A361A9620AB0084EFAE /* THGFoundation.framework */; };
@@ -65,6 +66,9 @@
 		CA32AD851A91C5FF002FD1B9 /* DispatchGroup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DispatchGroup.swift; sourceTree = "<group>"; };
 		CA58B25C1A91B08800C4B93E /* DispatchTimer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DispatchTimer.swift; sourceTree = "<group>"; };
 		CA58B25E1A91B1C000C4B93E /* DispatchClosure.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DispatchClosure.swift; sourceTree = "<group>"; };
+		CA88043A1A96310D00C00CAE /* THGDispatchTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "THGDispatchTests-Bridging-Header.h"; sourceTree = "<group>"; };
+		CA88043B1A96310D00C00CAE /* XCTestCase+Exceptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "XCTestCase+Exceptions.h"; path = "../../Excalibur/THGFoundation/TestExtensions/XCTestCase+Exceptions.h"; sourceTree = "<group>"; };
+		CA88043C1A96310D00C00CAE /* XCTestCase+Exceptions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "XCTestCase+Exceptions.m"; path = "../../Excalibur/THGFoundation/TestExtensions/XCTestCase+Exceptions.m"; sourceTree = "<group>"; };
 		CACF29AD1A9554660084EFAE /* Dispatch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dispatch.swift; sourceTree = "<group>"; };
 		CACF29FC1A9614930084EFAE /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		CACF29FD1A9614930084EFAE /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
@@ -138,6 +142,7 @@
 		CA0CEA781A8A877200DF93E9 /* THGDispatchTests */ = {
 			isa = PBXGroup;
 			children = (
+				CA8804341A96309700C00CAE /* XCTestExtensions */,
 				CA0CEA7B1A8A877200DF93E9 /* THGDispatchTests.swift */,
 				001EC91D1A92D437007BC6C4 /* THGDispatchSemaphoreTests.swift */,
 				CA0CEA791A8A877200DF93E9 /* Supporting Files */,
@@ -151,6 +156,16 @@
 				CA0CEA7A1A8A877200DF93E9 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CA8804341A96309700C00CAE /* XCTestExtensions */ = {
+			isa = PBXGroup;
+			children = (
+				CA88043B1A96310D00C00CAE /* XCTestCase+Exceptions.h */,
+				CA88043C1A96310D00C00CAE /* XCTestCase+Exceptions.m */,
+				CA88043A1A96310D00C00CAE /* THGDispatchTests-Bridging-Header.h */,
+			);
+			name = XCTestExtensions;
 			sourceTree = "<group>";
 		};
 		CACF2A2F1A96209B0084EFAE /* Modules */ = {
@@ -316,6 +331,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				001EC91E1A92D437007BC6C4 /* THGDispatchSemaphoreTests.swift in Sources */,
+				CA88043D1A96310D00C00CAE /* XCTestCase+Exceptions.m in Sources */,
 				CA0CEA7C1A8A877200DF93E9 /* THGDispatchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -459,6 +475,7 @@
 		CA0CEA831A8A877200DF93E9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -470,12 +487,15 @@
 				INFOPLIST_FILE = THGDispatchTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "THGDispatchTests/THGDispatchTests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		CA0CEA841A8A877200DF93E9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -483,6 +503,7 @@
 				INFOPLIST_FILE = THGDispatchTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "THGDispatchTests/THGDispatchTests-Bridging-Header.h";
 			};
 			name = Release;
 		};
