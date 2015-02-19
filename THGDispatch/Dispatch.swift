@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import THGFoundation
 
 public struct Dispatch {
     
@@ -50,7 +51,7 @@ public struct Dispatch {
         case .Custom(let rawQueue):
             dispatch_suspend(rawQueue)
         default:
-            assertionFailure("You can only suspend custom queues, not system queues!")
+            exceptionFailure("You can only suspend custom queues, not system queues!")
         }
     }
     
@@ -59,7 +60,7 @@ public struct Dispatch {
         case .Custom(let rawQueue):
             dispatch_resume(rawQueue)
         default:
-            assertionFailure("You can only suspend custom queues, not system queues!")
+            exceptionFailure("You can only suspend custom queues, not system queues!")
         }
     }
     
