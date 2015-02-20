@@ -60,7 +60,7 @@ public struct Dispatch {
         case .Custom(let rawQueue):
             dispatch_resume(rawQueue)
         default:
-            exceptionFailure("You can only suspend custom queues, not system queues!")
+            exceptionFailure("You can only resume custom queues, not system queues!")
         }
     }
     
