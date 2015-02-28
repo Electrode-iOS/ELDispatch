@@ -20,7 +20,8 @@ public enum DispatchQueue {
     case UserInitiated
     case Default
     case Utility
-    case Custom(rawQueue: dispatch_queue_t)
+    case Serial(rawQueue: dispatch_queue_t)
+    case Concurrent(rawQueue: dispatch_queue_t)
 
     public static func createSerial(label: String, targetQueue: DispatchQueue? = nil) -> DispatchQueue {
         let queue = DispatchQueue.customQueue(label, concurrent: false, targetQueue: targetQueue)
@@ -55,7 +56,10 @@ public enum DispatchQueue {
         case .Utility:
             return dispatch_get_global_queue(QOS_CLASS_UTILITY, 0)
             
-        case .Custom(let rawObject):
+        case .Serial(let rawObject):
+            return rawObject
+            
+        case .Concurrent(let rawObject):
             return rawObject
         }
     }
@@ -65,7 +69,7 @@ public enum DispatchQueue {
         let id = (bundle.reverseBundleIdentifier() ?? "") + "." + label
 
         let rawQueue: dispatch_queue_t = dispatch_queue_create(id, (concurrent ? DISPATCH_QUEUE_CONCURRENT : DISPATCH_QUEUE_SERIAL))
-        let queue = DispatchQueue.Custom(rawQueue: rawQueue)
+        let queue = (concurrent ? DispatchQueue.Concurrent(rawQueue: rawQueue) : DispatchQueue.Serial(rawQueue: rawQueue))
         
         if let target = targetQueue {
             dispatch_set_target_queue(rawQueue, targetQueue?.dispatchQueue())

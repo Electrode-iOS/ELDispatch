@@ -91,5 +91,5 @@ public class DispatchTimer {
     }
     
     private var rawTimer: dispatch_source_t? = nil
-    private var lock: Spinlock = Spinlock()
+    private let lock: Spinlock = Spinlock()
 }
