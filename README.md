@@ -4,3 +4,35 @@ THGDispatch module, includes GCD bits such as Queues, Groups, Timer, Semaphore, 
 Provides useful Swift language constructs to oft-used Grand Central Dispatch patterns
 
 Grand Central Dispatch is a powerful framework, but it can easily be difficult for someone to grasp how to use it well. With Swift, we can provide language constructs such as enumerations to allow dispatching closures to various prenamed priorities, such as .Background. We can also make using GCD groups easier through function chaining.
+
+___
+
+## Introduction
+
+THGDispatch/KillerRabbit implements the following constructs.
+
+* `Dispatch`: An abstraction of the `dispatch_*` APIs.
+* `DispatchQueue`: An abstraction of the `dispatc_queue_*` APIs.
+* `DispatchClosure`: An abstraction of the `dispatch_block_*` APIs.
+* `DispatchGroup`: An abstraction of the `dispatch_group_*` APIs.
+* `DispatchTimer`: A struct implementing a GCD timer using the `dispatch_source_*` APIs.
+* `DispatchSemaphore`: An abstraction of the `dispatch_semaphore_*` APIs.
+
+## Common Usage
+
+Executing a run-of-the-mill asynchronous closure:
+
+```swift
+Dispatch().async(.Background) {
+  doSomething()
+}
+```
+
+Executing an asynchronous closure on a background queue and notifying the main thread when it's completed.
+``` swift
+Dispatch().async(.Background) {
+  doSomething()
+}.notify(.Main) {
+  dearMainThreadImDone()
+}
+```
