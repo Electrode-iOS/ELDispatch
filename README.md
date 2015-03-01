@@ -9,7 +9,9 @@ ___
 
 ## A quick word about dependencies
 
-THGDispatch/KillerRabbit depends on THGFoundation/Excalibur (https://github.com/TheHolyGrail/Excalibur).  The projects are designed to live side-by-side in the file system.  ie:
+THGDispatch/KillerRabbit depends on THGFoundation/Excalibur (https://github.com/TheHolyGrail/Excalibur).  
+
+THG projects are designed to live side-by-side in the file system.  ie:
 
 * \MyProject
 * \MyProject\Excalibur
