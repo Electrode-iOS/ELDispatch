@@ -11,9 +11,9 @@ ___
 
 THGDispatch/KillerRabbit depends on THGFoundation/Excalibur (https://github.com/TheHolyGrail/Excalibur).  The projects are designed to live side-by-side in the file system.  ie:
 
-\MyProject
-\MyProject\Excalibur
-\MyProject\KillerRabbit
+* \MyProject
+* \MyProject\Excalibur
+* \MyProject\KillerRabbit
 
 We use an experimental tool called Modulo for dependency management.  It doesn't require Xcode workspaces, mess with your project, or have arcane config files that break every release, it's simple JSON.  It also doesn't require your dependencies to use Modulo either.  If you're using Modulo, you can also link to an existing git repo that doesn't use Modulo, it doesn't care.
 
