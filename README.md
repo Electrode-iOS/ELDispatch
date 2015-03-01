@@ -23,7 +23,9 @@ Now back to the good stuff....
 
 ## Introduction
 
-THGDispatch/KillerRabbit implements the following constructs.
+THGDispatch/KillerRabbit was heavily influenced by John Estropia's GCDKit (https://github.com/JohnEstropia/GCDKit).  We love the work he's done, despite having taken a slightly different direction in syntax and implementation.
+
+The following constructs have been implemented:
 
 * `Dispatch`: An abstraction of the `dispatch_*` APIs.
 * `DispatchQueue`: An abstraction of the `dispatc_queue_*` APIs.
