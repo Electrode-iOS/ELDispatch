@@ -7,6 +7,20 @@ Grand Central Dispatch is a powerful framework, but it can easily be difficult f
 
 ___
 
+## A quick word about dependencies
+
+THGDispatch/KillerRabbit depends on THGFoundation/Excalibur (https://github.com/TheHolyGrail/Excalibur).  The projects are designed to live side-by-side in the file system.  ie:
+
+\MyProject
+\MyProject\Excalibur
+\MyProject\KillerRabbit
+
+We use an experimental tool called Modulo for dependency management.  It doesn't require Xcode workspaces, mess with your project, or have arcane config files that break every release, it's simple JSON.  It also doesn't require your dependencies to use Modulo either.  If you're using Modulo, you can also link to an existing git repo that doesn't use Modulo, it doesn't care.
+
+That being said.. you don't have to use Modulo!  You can simple add both of these github projects as submodules and it'll work just the same.
+
+Now back to the good stuff....
+
 ## Introduction
 
 THGDispatch/KillerRabbit implements the following constructs.
@@ -28,7 +42,7 @@ Dispatch().async(.Background) {
 }
 ```
 
-Executing an asynchronous closure on a background queue and notifying the main thread when it's completed.
+Executing an asynchronous closure on a background queue and notifying the main thread when it's completed:
 ```Swift
 Dispatch().async(.Background) {
     doSomething()
@@ -37,7 +51,7 @@ Dispatch().async(.Background) {
 }
 ```
 
-Executing an asychronous closure and waiting for 3 seconds.
+Executing an asychronous closure and waiting for 3 seconds:
 ```Swift
 Dispatch().async(.Background) {
     doSomething()
@@ -48,7 +62,7 @@ Dispatch().async(.Background) {
 }
 ```
 
-Executing a few async tasks as a group and waiting indefinitely.
+Executing a few async tasks as a group and waiting indefinitely:
 ```Swift
 DispatchGroup().async(.Background) {
     doSomething(1)
@@ -59,7 +73,7 @@ DispatchGroup().async(.Background) {
 }.wait()
 ```
 or...
-```
+```Swift
 let group = DispatchGroup()
 
 group.async(.Background) {
@@ -73,4 +87,23 @@ group.async(.Background) {
 if group.wait(10) == true {
     handstandAndCartwheel()
 }
+```
+
+Execute an asynchronous task, synchronously with a Semaphore:
+```Swift
+let semaphore = DispatchSemaphore(initialValue: 0)
+        
+// start a NSURLSession to get some data from our imaginary command line tool.
+let task = session.dataTaskWithRequest(request) { (data, response, error) -> Void in
+    if data != nil {
+        let dataString: String = NSString(data: data, encoding: NSUTF8StringEncoding)! as String
+        json = JSON(string: dataString)
+    }
+            
+    semaphore.signal()
+}
+        
+task.resume()
+        
+semaphore.wait()
 ```
