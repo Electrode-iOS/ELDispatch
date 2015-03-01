@@ -111,6 +111,15 @@ semaphore.wait()
 
 We appreciate your contributions to all of our projects and look forward to interacting with you via Pull Requests, the issue tracker, via Twitter, etc.  We're happy to help you, and to have you help us.  We'll strive to answer every PR and issue and be very transparent in what we do.
 
+###### THG's Primary Contributors
+
+Dr. Sneed (@bsneed)<br>
+Steve Riggins (@steveriggins)<br>
+Sam Grover (@samgrover)<br>
+Angelo Di Paolo (@angelodipaolo)<br>
+Cody Garvin (@migs647)<br>
+Wes Ostler (@wesostler)<br>
+
 ## License
 
 The MIT License (MIT)
