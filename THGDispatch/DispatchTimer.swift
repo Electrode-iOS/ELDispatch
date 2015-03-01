@@ -9,17 +9,29 @@
 import Foundation
 import THGFoundation
 
+/**
+Represents a GCD timer.
+*/
 public class DispatchTimer {
     
+    /**
+    Initializes a new dispatch timer.
+    */
     public init () {
-        
+        // nothing to do here.  yet.
     }
     
-    public func schedule(queue: DispatchQueue, delay: NSTimeInterval = 0, leeway: NSTimeInterval = 0.2, interval: NSTimeInterval, _ closure: () -> Void) -> DispatchClosure {
-        /*if cancelled {
-            exceptionFailure("This timer has already been cancelled, you can't reuse it!")
-        }*/
-        
+    /**
+    Schedules a GCD timer on the specified queue.
+
+    :param: queue The target queue.
+    :param: interval The interval at which to execute the closure, in seconds.
+    :param: delay The time to wait before the timer beings, in seconds.  The default is 0.
+    :param: leeway A hint as to the leeway by which GCD may have to execute the closure.  The default is 0.2.
+    :param: suspended The timer will be created in a suspended state.
+    :param: closure The closure to execute.
+    */
+    public func schedule(queue: DispatchQueue, interval: NSTimeInterval, delay: NSTimeInterval = 0, leeway: NSTimeInterval = 0.2, suspended: Bool = false, _ closure: () -> Void) -> DispatchClosure {
         // if we have a timer object already, lets bolt.
         if rawTimer != nil {
             exceptionFailure("A timer has already been scheduled!")
@@ -42,11 +54,17 @@ public class DispatchTimer {
         
         dispatch_source_set_timer(rawTimer!, startTime, repeatInterval, leewayTime)
         dispatch_source_set_event_handler(rawTimer!, wrappedClosure.dispatchClosure())
-        dispatch_resume(rawTimer!)
+        
+        if suspended == false {
+            resume()
+        }
         
         return wrappedClosure
     }
     
+    /**
+    Cancels the timer.
+    */
     public func cancel() {
         if let timer = rawTimer {
             dispatch_source_cancel(timer)
@@ -54,6 +72,9 @@ public class DispatchTimer {
         }
     }
     
+    /**
+    Suspends execution of the timer.  Call `resume()` to begin again.
+    */
     public func suspend() {
         if let timer = rawTimer {
             if !suspended {
@@ -65,6 +86,9 @@ public class DispatchTimer {
         }
     }
     
+    /**
+    Resumes a timer.  Call `suspend()` to suspend it.
+    */
     public func resume() {
         if let timer = rawTimer {
             if suspended {
@@ -76,7 +100,10 @@ public class DispatchTimer {
         }
     }
     
-    private var suspended: Bool {
+    /**
+    :returns: The state of the timer.  True means the timer is suspended.  False means that it isn't.
+    */
+    public var suspended: Bool {
         get {
             return lock.around {
                 self.suspended

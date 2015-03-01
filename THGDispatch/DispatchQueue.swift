@@ -9,30 +9,88 @@
 import Foundation
 import THGFoundation
 
+/**
+An enum representing a GCD dispatch queue.
+*/
 public enum DispatchQueue {
     
-    /**
-    Returns the serial dispatch queue associated with the application’s main thread.
-    */
+    /// The serial dispatch queue associated with the application’s main thread.
     case Main
+    
+    /// A global concurrent queue with a Background QOS class
     case Background
+    
+    /// A global concurrent queue with a User-Interactive QOS class
     case UserInteractive
+    
+    /// A global concurrent queue with a User-Initiated QOS class
     case UserInitiated
+    
+    /// A global concurrent queue with the Default QOS class.
     case Default
+    
+    /// A global concurrent queue with the Utility QOS class.
     case Utility
+    
+    /// A global concurrent High-Priority queue.
+    case High
+    
+    /// A global concurrent Low-Priority queue.
+    case Low
+    
+    /**
+    A custom serial queue.  Useful for wrapping your own queue's that were manually created.
+    Rather than use this directly, consider using `createSerial()`.
+    */
     case Serial(rawQueue: dispatch_queue_t)
+    
+    /**
+    A custom concurrent queue.  Useful for wrapping your own queue's that were manually created.
+    Rather than use this directly, consider using `createConcurrent()`.
+    */
     case Concurrent(rawQueue: dispatch_queue_t)
 
+    /**
+    Returns a new serial queue with the specified lable (for debugging/crash reporting).
+
+    :param: label The queue's identifying label.
+    :param: targetQueue The target queue.  Default is "nil", aka .Default
+    :returns: A DispatchQueue with a .Serial value.
+
+    By default all private queues point to the default global queue (.Default).  You can specify
+    a target queue to make a queue heirarchy and further set priority, etc.
+    
+    Note: when specifying a value for label, the app bundle is automatically queried, thus a value
+    of `"mylabel"` results in `"com.mycompany.mylabel"` when seen in a debugger or crash log.
+    */
     public static func createSerial(label: String, targetQueue: DispatchQueue? = nil) -> DispatchQueue {
         let queue = DispatchQueue.customQueue(label, concurrent: false, targetQueue: targetQueue)
         return queue
     }
     
+    /**
+    Returns a new concurrent queue with the specified lable (for debugging/crash reporting).
+    
+    :param: label The queue's identifying label.
+    :param: targetQueue The target queue.  Default is "nil", aka .Default
+    :returns: A DispatchQueue with a .Serial value.
+    
+    By default all private queues point to the default global queue (.Default).  You can specify
+    a target queue to make a queue heirarchy and further set priority, etc.
+    
+    Note: when specifying a value for label, the app bundle is automatically queried, thus a value
+    of `"mylabel"` results in `"com.mycompany.mylabel"` when seen in a debugger or crash log.
+    */
     public static func createConcurrent(label: String, targetQueue: DispatchQueue? = nil) -> DispatchQueue {
         let queue = DispatchQueue.customQueue(label, concurrent: true, targetQueue: targetQueue)
         return queue
     }
     
+    /**
+    Returns a raw dispatch_queue_t that represents this queue.
+    
+    :returns: A raw dispatch_queue_t.
+    */
     public func dispatchQueue() -> dispatch_queue_t {
         // we need to store these into a rawObject private var so we don't run
         // the risk to creating multiple queues for serial and concurrent.
@@ -55,6 +113,12 @@ public enum DispatchQueue {
         
         case .Utility:
             return dispatch_get_global_queue(QOS_CLASS_UTILITY, 0)
+            
+        case .High:
+            return dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0)
+            
+        case .Low:
+            return dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_LOW, 0)
             
         case .Serial(let rawObject):
             return rawObject

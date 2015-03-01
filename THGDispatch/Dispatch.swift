@@ -9,6 +9,9 @@
 import Foundation
 import THGFoundation
 
+/*
+A struct representing a the GCD dispatch mechanism.
+*/
 public struct Dispatch {
     
     public init() {
@@ -44,6 +47,8 @@ public struct Dispatch {
     /**
     Dispatches a closure at a specific time on the specified queue.
     
+    See also: `dispatch_after`
+
     :param: queue DispatchQueue to dispatch to.  ie: .Background
     :param: delay The delay before running the closure, in milliseconds.
     :param: closure Closure to be dispatched.
@@ -57,9 +62,26 @@ public struct Dispatch {
     }
     
     /**
-    Dispatches a closure asynchronously on the specified queue.
+    Submits a closure to a dispatch queue for multiple invocations.
     
-    :param: queue DispatchQueue to dispatch to.  ie: .Background
+    See also: `dispatch_apply`
+    
+    :param: iterations The number of iterations to perform.
+    :param: queue The target queue to which the closure is submitted.
+    :param: closure The closure to invoke on the target queue. The parameter passed to this closure is the current index of iteration.
+    */
+    public func apply(queue: DispatchQueue, iterations: Int, closure: (iteration: Int) -> Void) {
+        dispatch_apply(iterations, queue.dispatchQueue()) { (iteration) -> Void in
+            autoreleasepool {
+                closure(iteration: iteration)
+            }
+        }
+    }
+    
+    /**
+    Dispatches a barrier closure asynchronously on the a concurrent queue.
+    
+    :param: queue DispatchQueue to dispatch to.  Must be a concurrent queue.
     :param: closure Closure to be dispatched.
     :returns: A DispatchClosure that can be used for chaining, storage, etc.
     */
@@ -76,12 +98,22 @@ public struct Dispatch {
         return wrappedClosure
     }
     
+    /**
+    Dispatches a barrier closure synchronously on the a concurrent queue.
+    
+    :param: queue DispatchQueue to dispatch to.  Must be a concurrent queue.
+    :param: closure Closure to be dispatched.
+    :returns: A DispatchClosure that can be used for chaining, storage, etc.
+    */
     public func barrierSync(queue: DispatchQueue, closure: () -> Void) -> DispatchClosure {
         let wrappedClosure = DispatchClosure(closure)
         dispatch_barrier_sync(queue.dispatchQueue(), wrappedClosure.dispatchClosure())
         return wrappedClosure
     }
     
+    /**
+    Suspends the specified queue.
+    */
     public func suspend(queue: DispatchQueue) {
         switch queue {
         case .Serial(let rawQueue):
@@ -93,6 +125,9 @@ public struct Dispatch {
         }
     }
     
+    /**
+    Resumes the specified queue.
+    */
     public func resume(queue: DispatchQueue) {
         switch queue {
         case .Serial(let rawQueue):
