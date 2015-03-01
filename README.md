@@ -24,15 +24,53 @@ Executing a run-of-the-mill asynchronous closure:
 
 ```Swift
 Dispatch().async(.Background) {
-  doSomething()
+    doSomething()
 }
 ```
 
 Executing an asynchronous closure on a background queue and notifying the main thread when it's completed.
 ```Swift
 Dispatch().async(.Background) {
-  doSomething()
+    doSomething()
 }.notify(.Main) {
-  dearMainThreadImDone()
+    dearMainThreadImDone()
+}
+```
+
+Executing an asychronous closure and waiting for 3 seconds.
+```Swift
+Dispatch().async(.Background) {
+    doSomething()
+}.wait(3) == false {
+    itTimedOutImSad()
+} else {
+    itWasSuccessfulAndMyLifeHasMeaning()
+}
+```
+
+Executing a few async tasks as a group and waiting indefinitely.
+```Swift
+DispatchGroup().async(.Background) {
+    doSomething(1)
+}.async(.Utility) {
+    doSomething(2)
+}.async(.High) {
+    doSomethingUrgently(3)
+}.wait()
+```
+or...
+```
+let group = DispatchGroup()
+
+group.async(.Background) {
+    doSomething(1)
+}.async(.Utility) {
+    doSomething(2)
+}.async(.High) {
+    doSomethingUrgently(3)
+}
+
+if group.wait(10) == true {
+    handstandAndCartwheel()
 }
 ```
