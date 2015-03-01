@@ -22,14 +22,14 @@ THGDispatch/KillerRabbit implements the following constructs.
 
 Executing a run-of-the-mill asynchronous closure:
 
-```swift
+```Swift
 Dispatch().async(.Background) {
   doSomething()
 }
 ```
 
 Executing an asynchronous closure on a background queue and notifying the main thread when it's completed.
-``` swift
+```Swift
 Dispatch().async(.Background) {
   doSomething()
 }.notify(.Main) {
