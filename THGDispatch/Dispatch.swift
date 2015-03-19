@@ -131,9 +131,9 @@ public struct Dispatch {
     public func resume(queue: DispatchQueue) {
         switch queue {
         case .Serial(let rawQueue):
-            dispatch_suspend(rawQueue)
+            dispatch_resume(rawQueue)
         case .Concurrent(let rawQueue):
-            dispatch_suspend(rawQueue)
+            dispatch_resume(rawQueue)
         default:
             exceptionFailure("You can only resume custom queues, not system queues!")
         }
