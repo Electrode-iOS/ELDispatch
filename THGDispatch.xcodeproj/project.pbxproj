@@ -9,8 +9,9 @@
 /* Begin PBXBuildFile section */
 		001EC91A1A92AC15007BC6C4 /* DispatchSemaphore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001EC9191A92AC15007BC6C4 /* DispatchSemaphore.swift */; };
 		001EC91E1A92D437007BC6C4 /* THGDispatchSemaphoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001EC91D1A92D437007BC6C4 /* THGDispatchSemaphoreTests.swift */; };
+		2285B18D1B0AA6FE0088B07B /* THGFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2285B1891B0A9C600088B07B /* THGFoundation.framework */; };
+		2285B18E1B0AA7990088B07B /* THGFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2285B1891B0A9C600088B07B /* THGFoundation.framework */; };
 		CA0CEA6F1A8A877200DF93E9 /* THGDispatch.h in Headers */ = {isa = PBXBuildFile; fileRef = CA0CEA6E1A8A877200DF93E9 /* THGDispatch.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		CA0CEA751A8A877200DF93E9 /* THGDispatch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA0CEA691A8A877200DF93E9 /* THGDispatch.framework */; };
 		CA0CEA7C1A8A877200DF93E9 /* THGDispatchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0CEA7B1A8A877200DF93E9 /* THGDispatchTests.swift */; };
 		CA0CEA861A8A8B0D00DF93E9 /* DispatchQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0CEA851A8A8B0D00DF93E9 /* DispatchQueue.swift */; };
 		CA32AD861A91C5FF002FD1B9 /* DispatchGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA32AD851A91C5FF002FD1B9 /* DispatchGroup.swift */; };
@@ -19,7 +20,6 @@
 		CA88043D1A96310D00C00CAE /* XCTestCase+Exceptions.m in Sources */ = {isa = PBXBuildFile; fileRef = CA88043C1A96310D00C00CAE /* XCTestCase+Exceptions.m */; };
 		CACF29AE1A9554660084EFAE /* Dispatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = CACF29AD1A9554660084EFAE /* Dispatch.swift */; };
 		CACF29FE1A9614930084EFAE /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = CACF29FC1A9614930084EFAE /* LICENSE */; };
-		CACF2A3E1A9623D80084EFAE /* THGFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CACF2A361A9620AB0084EFAE /* THGFoundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,32 +30,12 @@
 			remoteGlobalIDString = CA0CEA681A8A877200DF93E9;
 			remoteInfo = THGDispatch;
 		};
-		CACF2A351A9620AB0084EFAE /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = CACF2A301A9620AB0084EFAE /* THGFoundation.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = CACF2A0A1A9614D20084EFAE;
-			remoteInfo = THGFoundation;
-		};
-		CACF2A371A9620AB0084EFAE /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = CACF2A301A9620AB0084EFAE /* THGFoundation.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = CACF2A151A9614D20084EFAE;
-			remoteInfo = THGFoundationTests;
-		};
-		CACF2A3C1A9623C60084EFAE /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = CACF2A301A9620AB0084EFAE /* THGFoundation.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = CACF2A091A9614D20084EFAE;
-			remoteInfo = THGFoundation;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		001EC9191A92AC15007BC6C4 /* DispatchSemaphore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DispatchSemaphore.swift; sourceTree = "<group>"; };
 		001EC91D1A92D437007BC6C4 /* THGDispatchSemaphoreTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = THGDispatchSemaphoreTests.swift; sourceTree = "<group>"; };
+		2285B1891B0A9C600088B07B /* THGFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = THGFoundation.framework; path = Carthage/Build/iOS/THGFoundation.framework; sourceTree = "<group>"; };
 		CA0CEA691A8A877200DF93E9 /* THGDispatch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = THGDispatch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA0CEA6D1A8A877200DF93E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CA0CEA6E1A8A877200DF93E9 /* THGDispatch.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = THGDispatch.h; sourceTree = "<group>"; };
@@ -72,7 +52,6 @@
 		CACF29AD1A9554660084EFAE /* Dispatch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dispatch.swift; sourceTree = "<group>"; };
 		CACF29FC1A9614930084EFAE /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		CACF29FD1A9614930084EFAE /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		CACF2A301A9620AB0084EFAE /* THGFoundation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = THGFoundation.xcodeproj; path = ../Excalibur/THGFoundation.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,7 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CACF2A3E1A9623D80084EFAE /* THGFoundation.framework in Frameworks */,
+				2285B18D1B0AA6FE0088B07B /* THGFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,20 +67,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CA0CEA751A8A877200DF93E9 /* THGDispatch.framework in Frameworks */,
+				2285B18E1B0AA7990088B07B /* THGFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2285B18C1B0A9CFD0088B07B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2285B1891B0A9C600088B07B /* THGFoundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		CA0CEA5F1A8A877200DF93E9 = {
 			isa = PBXGroup;
 			children = (
+				2285B18C1B0A9CFD0088B07B /* Frameworks */,
 				CACF29FC1A9614930084EFAE /* LICENSE */,
 				CACF29FD1A9614930084EFAE /* README.md */,
 				CA0CEA6B1A8A877200DF93E9 /* THGDispatch */,
-				CACF2A2F1A96209B0084EFAE /* Modules */,
 				CA0CEA781A8A877200DF93E9 /* THGDispatchTests */,
 				CA0CEA6A1A8A877200DF93E9 /* Products */,
 			);
@@ -168,23 +155,6 @@
 			name = XCTestExtensions;
 			sourceTree = "<group>";
 		};
-		CACF2A2F1A96209B0084EFAE /* Modules */ = {
-			isa = PBXGroup;
-			children = (
-				CACF2A301A9620AB0084EFAE /* THGFoundation.xcodeproj */,
-			);
-			name = Modules;
-			sourceTree = "<group>";
-		};
-		CACF2A311A9620AB0084EFAE /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				CACF2A361A9620AB0084EFAE /* THGFoundation.framework */,
-				CACF2A381A9620AB0084EFAE /* THGFoundationTests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -207,11 +177,11 @@
 				CA0CEA651A8A877200DF93E9 /* Frameworks */,
 				CA0CEA661A8A877200DF93E9 /* Headers */,
 				CA0CEA671A8A877200DF93E9 /* Resources */,
+				2285B18B1B0A9C990088B07B /* ShellScript */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				CACF2A3D1A9623C60084EFAE /* PBXTargetDependency */,
 			);
 			name = THGDispatch;
 			productName = THGDispatch;
@@ -263,12 +233,6 @@
 			mainGroup = CA0CEA5F1A8A877200DF93E9;
 			productRefGroup = CA0CEA6A1A8A877200DF93E9 /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = CACF2A311A9620AB0084EFAE /* Products */;
-					ProjectRef = CACF2A301A9620AB0084EFAE /* THGFoundation.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				CA0CEA681A8A877200DF93E9 /* THGDispatch */,
@@ -276,23 +240,6 @@
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		CACF2A361A9620AB0084EFAE /* THGFoundation.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = THGFoundation.framework;
-			remoteRef = CACF2A351A9620AB0084EFAE /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		CACF2A381A9620AB0084EFAE /* THGFoundationTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = THGFoundationTests.xctest;
-			remoteRef = CACF2A371A9620AB0084EFAE /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		CA0CEA671A8A877200DF93E9 /* Resources */ = {
@@ -311,6 +258,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2285B18B1B0A9C990088B07B /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/THGFoundation.framework",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		CA0CEA641A8A877200DF93E9 /* Sources */ = {
@@ -343,11 +307,6 @@
 			isa = PBXTargetDependency;
 			target = CA0CEA681A8A877200DF93E9 /* THGDispatch */;
 			targetProxy = CA0CEA761A8A877200DF93E9 /* PBXContainerItemProxy */;
-		};
-		CACF2A3D1A9623C60084EFAE /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = THGFoundation;
-			targetProxy = CACF2A3C1A9623C60084EFAE /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -447,6 +406,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = THGDispatch/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -464,6 +427,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = THGDispatch/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -479,6 +446,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -499,6 +467,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = THGDispatchTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
