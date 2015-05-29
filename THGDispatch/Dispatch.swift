@@ -7,7 +7,10 @@
 //
 
 import Foundation
+#if NOFRAMEWORKS
+#else
 import THGFoundation
+#endif
 
 /*
 A struct representing a the GCD dispatch mechanism.

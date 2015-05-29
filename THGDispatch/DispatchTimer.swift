@@ -7,7 +7,10 @@
 //
 
 import Foundation
+#if NOFRAMEWORKS
+#else
 import THGFoundation
+#endif
 
 /**
 Represents a GCD timer.

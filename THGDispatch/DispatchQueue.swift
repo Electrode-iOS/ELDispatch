@@ -7,7 +7,10 @@
 //
 
 import Foundation
+#if NOFRAMEWORKS
+#else
 import THGFoundation
+#endif
 
 /**
 An enum representing a GCD dispatch queue.
