@@ -16,7 +16,7 @@ public struct DispatchClosure {
     /**
     Initializes a new closure representation.
 
-    :param: closure The closure to be contained within.
+    - parameter closure: The closure to be contained within.
     */
     public init(_ closure: () -> Void) {
         rawObject = dispatch_block_create(DISPATCH_BLOCK_INHERIT_QOS_CLASS) {
@@ -30,9 +30,9 @@ public struct DispatchClosure {
     
     See also: `dispatch_block_notify`
 
-    :param: queue The queue to which the supplied notification closure will be submitted when the observed closure completes.
-    :param: closure The closure to be executed when the previously chained/observed closure completes.
-    :returns: A DispatchClosure that can be further chained if desired.
+    - parameter queue: The queue to which the supplied notification closure will be submitted when the observed closure completes.
+    - parameter closure: The closure to be executed when the previously chained/observed closure completes.
+    - returns: A DispatchClosure that can be further chained if desired.
     */
     public func notify(queue: DispatchQueue, closure: () -> Void) -> DispatchClosure {
         let wrappedClosure = DispatchClosure(closure)
@@ -55,8 +55,8 @@ public struct DispatchClosure {
     
     See also: `dispatch_block_wait`
 
-    :param: timeout The timeout interval in seconds.
-    :returns: true if succesful, false if timed out.
+    - parameter timeout: The timeout interval in seconds.
+    - returns: true if succesful, false if timed out.
     */
     public func wait(timeout: NSTimeInterval) -> Bool {
         let dispatchTimeout = dispatch_time(DISPATCH_TIME_NOW, Int64(timeout * NSTimeInterval(NSEC_PER_SEC)))

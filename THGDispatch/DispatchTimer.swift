@@ -27,12 +27,12 @@ public class DispatchTimer {
     /**
     Schedules a GCD timer on the specified queue.
 
-    :param: queue The target queue.
-    :param: interval The interval at which to execute the closure, in seconds.
-    :param: delay The time to wait before the timer beings, in seconds.  The default is 0.
-    :param: leeway A hint as to the leeway by which GCD may have to execute the closure.  The default is 0.2.
-    :param: suspended The timer will be created in a suspended state.
-    :param: closure The closure to execute.
+    - parameter queue: The target queue.
+    - parameter interval: The interval at which to execute the closure, in seconds.
+    - parameter delay: The time to wait before the timer beings, in seconds.  The default is 0.
+    - parameter leeway: A hint as to the leeway by which GCD may have to execute the closure.  The default is 0.2.
+    - parameter suspended: The timer will be created in a suspended state.
+    - parameter closure: The closure to execute.
     */
     public func schedule(queue: DispatchQueue, interval: NSTimeInterval, delay: NSTimeInterval = 0, leeway: NSTimeInterval = 0.2, suspended: Bool = false, _ closure: () -> Void) -> DispatchClosure {
         // if we have a timer object already, lets bolt.
@@ -104,7 +104,7 @@ public class DispatchTimer {
     }
     
     /**
-    :returns: The state of the timer.  True means the timer is suspended.  False means that it isn't.
+    - returns: The state of the timer.  True means the timer is suspended.  False means that it isn't.
     */
     public var suspended: Bool {
         get {

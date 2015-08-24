@@ -56,9 +56,9 @@ public enum DispatchQueue {
     /**
     Returns a new serial queue with the specified lable (for debugging/crash reporting).
 
-    :param: label The queue's identifying label.
-    :param: targetQueue The target queue.  Default is "nil", aka .Default
-    :returns: A DispatchQueue with a .Serial value.
+    - parameter label: The queue's identifying label.
+    - parameter targetQueue: The target queue.  Default is "nil", aka .Default
+    - returns: A DispatchQueue with a .Serial value.
 
     By default all private queues point to the default global queue (.Default).  You can specify
     a target queue to make a queue heirarchy and further set priority, etc.
@@ -74,9 +74,9 @@ public enum DispatchQueue {
     /**
     Returns a new concurrent queue with the specified lable (for debugging/crash reporting).
     
-    :param: label The queue's identifying label.
-    :param: targetQueue The target queue.  Default is "nil", aka .Default
-    :returns: A DispatchQueue with a .Serial value.
+    - parameter label: The queue's identifying label.
+    - parameter targetQueue: The target queue.  Default is "nil", aka .Default
+    - returns: A DispatchQueue with a .Serial value.
     
     By default all private queues point to the default global queue (.Default).  You can specify
     a target queue to make a queue heirarchy and further set priority, etc.
@@ -92,7 +92,7 @@ public enum DispatchQueue {
     /**
     Returns a raw dispatch_queue_t that represents this queue.
     
-    :returns: A raw dispatch_queue_t.
+    - returns: A raw dispatch_queue_t.
     */
     public func dispatchQueue() -> dispatch_queue_t {
         // we need to store these into a rawObject private var so we don't run
@@ -138,15 +138,15 @@ public enum DispatchQueue {
         let rawQueue: dispatch_queue_t = dispatch_queue_create(id, (concurrent ? DISPATCH_QUEUE_CONCURRENT : DISPATCH_QUEUE_SERIAL))
         let queue = (concurrent ? DispatchQueue.Concurrent(rawQueue: rawQueue) : DispatchQueue.Serial(rawQueue: rawQueue))
         
-        if let target = targetQueue {
-            dispatch_set_target_queue(rawQueue, targetQueue?.dispatchQueue())
+        if let targetQueue = targetQueue {
+            dispatch_set_target_queue(rawQueue, targetQueue.dispatchQueue())
         }
         
         return queue
     }
 }
 
-@objc public class THGDispatch {
+public class THGDispatch {
     init() {
         // using this because i want this thing to cry bloody murder if it's instantiated.
         assertionFailure("Do not instantiate THGDispatch!")

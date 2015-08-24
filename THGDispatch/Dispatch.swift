@@ -24,9 +24,9 @@ public struct Dispatch {
     /**
     Dispatches a closure asynchronously on the specified queue.
     
-    :param: queue DispatchQueue to dispatch to.  ie: .Background
-    :param: closure Closure to be dispatched.
-    :returns: A DispatchClosure that can be used for chaining, storage, etc.
+    - parameter queue: DispatchQueue to dispatch to.  ie: .Background
+    - parameter closure: Closure to be dispatched.
+    - returns: A DispatchClosure that can be used for chaining, storage, etc.
     */
     public func async(queue: DispatchQueue, closure: () -> Void) -> DispatchClosure {
         let wrappedClosure = DispatchClosure(closure)
@@ -37,9 +37,9 @@ public struct Dispatch {
     /**
     Dispatches a closure synchronously on the specified queue.
     
-    :param: queue DispatchQueue to dispatch to.  ie: .Background
-    :param: closure Closure to be dispatched.
-    :returns: A DispatchClosure that can be used for chaining, storage, etc.
+    - parameter queue: DispatchQueue to dispatch to.  ie: .Background
+    - parameter closure: Closure to be dispatched.
+    - returns: A DispatchClosure that can be used for chaining, storage, etc.
     */
     public func sync(queue: DispatchQueue, closure: () -> Void) -> DispatchClosure {
         let wrappedClosure = DispatchClosure(closure)
@@ -52,10 +52,10 @@ public struct Dispatch {
     
     See also: `dispatch_after`
 
-    :param: queue DispatchQueue to dispatch to.  ie: .Background
-    :param: delay The delay before running the closure, in milliseconds.
-    :param: closure Closure to be dispatched.
-    :returns: A DispatchClosure that can be used for chaining, storage, etc.
+    - parameter queue: DispatchQueue to dispatch to.  ie: .Background
+    - parameter delay: The delay before running the closure, in milliseconds.
+    - parameter closure: Closure to be dispatched.
+    - returns: A DispatchClosure that can be used for chaining, storage, etc.
     */
     public func after(queue: DispatchQueue, delay: NSTimeInterval, closure: () -> Void) -> DispatchClosure {
         let wrappedClosure = DispatchClosure(closure)
@@ -69,9 +69,9 @@ public struct Dispatch {
     
     See also: `dispatch_apply`
     
-    :param: iterations The number of iterations to perform.
-    :param: queue The target queue to which the closure is submitted.
-    :param: closure The closure to invoke on the target queue. The parameter passed to this closure is the current index of iteration.
+    - parameter iterations: The number of iterations to perform.
+    - parameter queue: The target queue to which the closure is submitted.
+    - parameter closure: The closure to invoke on the target queue. The parameter passed to this closure is the current index of iteration.
     */
     public func apply(queue: DispatchQueue, iterations: Int, closure: (iteration: Int) -> Void) {
         dispatch_apply(iterations, queue.dispatchQueue()) { (iteration) -> Void in
@@ -84,9 +84,9 @@ public struct Dispatch {
     /**
     Dispatches a barrier closure asynchronously on the a concurrent queue.
     
-    :param: queue DispatchQueue to dispatch to.  Must be a concurrent queue.
-    :param: closure Closure to be dispatched.
-    :returns: A DispatchClosure that can be used for chaining, storage, etc.
+    - parameter queue: DispatchQueue to dispatch to.  Must be a concurrent queue.
+    - parameter closure: Closure to be dispatched.
+    - returns: A DispatchClosure that can be used for chaining, storage, etc.
     */
     public func barrierAsync(queue: DispatchQueue, closure: () -> Void) -> DispatchClosure {
         switch queue {
@@ -104,9 +104,9 @@ public struct Dispatch {
     /**
     Dispatches a barrier closure synchronously on the a concurrent queue.
     
-    :param: queue DispatchQueue to dispatch to.  Must be a concurrent queue.
-    :param: closure Closure to be dispatched.
-    :returns: A DispatchClosure that can be used for chaining, storage, etc.
+    - parameter queue: DispatchQueue to dispatch to.  Must be a concurrent queue.
+    - parameter closure: Closure to be dispatched.
+    - returns: A DispatchClosure that can be used for chaining, storage, etc.
     */
     public func barrierSync(queue: DispatchQueue, closure: () -> Void) -> DispatchClosure {
         let wrappedClosure = DispatchClosure(closure)

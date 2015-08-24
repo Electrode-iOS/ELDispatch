@@ -23,9 +23,9 @@ public struct DispatchGroup {
     /**
     Executes a closure asynchronously on the specified queue.
 
-    :param: queue The queue that the closure should be dispatched on.
-    :param: closure The closure to be executed on the given queue.
-    :returns: A chainable DispatchGroup.
+    - parameter queue: The queue that the closure should be dispatched on.
+    - parameter closure: The closure to be executed on the given queue.
+    - returns: A chainable DispatchGroup.
     */
     public func async(queue: DispatchQueue, _ closure: () -> Void) -> DispatchGroup {
         dispatch_group_async(rawObject, queue.dispatchQueue()) {
@@ -40,9 +40,9 @@ public struct DispatchGroup {
     
     See also: `dispatch_group_notify`
     
-    :param: queue The queue to which the supplied notification closure will be submitted when the observed closure completes.
-    :param: closure The closure to be executed when the previously chained/observed closure completes.
-    :returns: A DispatchClosure that can be further chained if desired.
+    - parameter queue: The queue to which the supplied notification closure will be submitted when the observed closure completes.
+    - parameter closure: The closure to be executed when the previously chained/observed closure completes.
+    - returns: A DispatchClosure that can be further chained if desired.
     */
     public func notify(queue: DispatchQueue, _ closure: () -> Void) {
         dispatch_group_notify(rawObject, queue.dispatchQueue()) {

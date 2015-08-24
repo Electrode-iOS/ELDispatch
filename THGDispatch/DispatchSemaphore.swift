@@ -18,7 +18,7 @@ public struct DispatchSemaphore {
     useful for managing a finite pool of resources, where the pool size is equal
     to the value.
 
-    :param: initialValue The starting value for the semaphore.
+    - parameter initialValue: The starting value for the semaphore.
     */
     public init(initialValue: Int) {
         rawObject = dispatch_semaphore_create(initialValue)
@@ -36,8 +36,8 @@ public struct DispatchSemaphore {
     Wait (decrement) for the semaphore.  If the resulting value is less than zero,
     this function waits for a signal to occur before returning.
     
-    :param: timeout Timeout, in seconds.
-    :returns: true if succesful, false if timed out.
+    - parameter timeout: Timeout, in seconds.
+    - returns: true if succesful, false if timed out.
     */
     public func wait(timeout: NSTimeInterval) -> Bool {
         let dispatchTimeout = dispatch_time(DISPATCH_TIME_NOW, Int64(timeout * NSTimeInterval(NSEC_PER_SEC)))

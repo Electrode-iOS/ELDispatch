@@ -152,6 +152,6 @@ class THGDispatchTests: XCTestCase {
     }
     
     func testSerialQueue() {
-        let serialQueue = DispatchQueue.createSerial("blah")
+        DispatchQueue.createSerial("blah")
     }
 }
