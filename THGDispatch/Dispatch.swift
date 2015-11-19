@@ -90,7 +90,7 @@ public struct Dispatch {
     */
     public func barrierAsync(queue: DispatchQueue, closure: () -> Void) -> DispatchClosure {
         switch queue {
-        case .Concurrent(let rawQueue):
+        case .Concurrent( _):
             0 // do nothing.
         default:
             exceptionFailure("You can only dispatch barrier closures on a concurrent queue!")
