@@ -1,0 +1,7 @@
+language: objective-c
+osx_image: xcode7.2
+
+install: 
+  - git clone https://github.com/TheHolyGrail/Excalibur.git ../Excalibur
+script:
+   - xctool -project THGDispatch.xcodeproj -scheme THGDispatch -sdk iphonesimulator build test

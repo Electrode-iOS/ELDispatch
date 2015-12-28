@@ -1,29 +1,25 @@
-# KillerRabbit
-THGDispatch module, includes GCD bits such as Queues, Groups, Timer, Semaphore, etc.
+# KillerRabbit [![Build Status](https://travis-ci.org/TheHolyGrail/KillerRabbit.svg)](https://travis-ci.org/TheHolyGrail/KillerRabbit)
 
-Provides useful Swift language constructs to oft-used Grand Central Dispatch patterns
+THGDispatch is a Swift framework that provides useful Swift language constructs to oft-used Grand Central Dispatch patterns such as Queues, Groups, Timer, Semaphore, etc.
 
-Grand Central Dispatch is a powerful framework, but it can easily be difficult for someone to grasp how to use it well. With Swift, we can provide language constructs such as enumerations to allow dispatching closures to various prenamed priorities, such as .Background. We can also make using GCD groups easier through function chaining.
+Grand Central Dispatch is a powerful library, but it can easily be difficult for someone to grasp how to use it well. With Swift, we can provide language constructs such as enumerations to allow dispatching closures to various prenamed priorities, such as .Background. We can also make using GCD groups easier through function chaining.
 
-___
+## Requirements
 
-## A quick word about dependencies
+KillerRabbit depends on [`THGFoundation.framework`](https://github.com/TheHolyGrail/Excalibur).
 
-THGDispatch/KillerRabbit depends on THGFoundation/Excalibur (https://github.com/TheHolyGrail/Excalibur).  
-
-THG projects are designed to live side-by-side in the file system.  ie:
+[THG](https://github.com/TheHolyGrail/) frameworks are designed to live side-by-side in the file system, like so:
 
 * \MyProject
 * \MyProject\Excalibur
 * \MyProject\KillerRabbit
 
-We use an experimental tool called Modulo for dependency management.  It doesn't require Xcode workspaces, mess with your project, or have arcane config files that break every release, it's simple JSON.  It also doesn't require your dependencies to use Modulo either.  If you're using Modulo, you can also link to an existing git repo that doesn't use Modulo, it doesn't care.
 
-That being said.. you don't have to use Modulo!  You can simple add both of these github projects as submodules and it'll work just the same.
+## Installation
 
-Now back to the good stuff....
+Install by adding `THGDispatch.xcodeproj` to your project and configuring your target to link `THGDispatch.framework`.
 
-## Introduction
+## Getting Started
 
 THGDispatch/KillerRabbit was heavily influenced by John Estropia's GCDKit (https://github.com/JohnEstropia/GCDKit).  We love the work he's done, despite having taken a slightly different direction in syntax and implementation.
 
