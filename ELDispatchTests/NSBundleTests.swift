@@ -1,6 +1,6 @@
 //
 //  NSBundleTests.swift
-//  THGDispatch
+//  ELDispatch
 //
 //  Created by Brandon Sneed on 2/16/15.
 //  Copyright (c) 2015 TheHolyGrail. All rights reserved.
@@ -8,7 +8,7 @@
 
 import UIKit
 import XCTest
-import THGDispatch
+import ELDispatch
 import Foundation
 
 class NSBundleTests: XCTestCase {
@@ -25,7 +25,7 @@ class NSBundleTests: XCTestCase {
     
     func testReverseBundleID() {
         
-        let id = NSBundle(forClass: THGDispatch.self)
+        let id = NSBundle(forClass: ELDispatch.self)
         let label = "doofus"
         
         println("reversedID = %@", id.reverseBundleIdentifier()!)

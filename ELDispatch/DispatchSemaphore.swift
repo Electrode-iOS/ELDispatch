@@ -1,6 +1,6 @@
 //
 //  DispatchSemaphore.swift
-//  THGDispatch
+//  ELDispatch
 //
 //  Created by Steven W. Riggins on 2/16/15.
 //  Copyright (c) 2015 TheHolyGrail. All rights reserved.

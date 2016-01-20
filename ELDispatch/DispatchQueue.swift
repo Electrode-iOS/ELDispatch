@@ -1,6 +1,6 @@
 //
 //  DispatchQueue.swift
-//  THGDispatch
+//  ELDispatch
 //
 //  Created by Brandon Sneed on 2/10/15.
 //  Copyright (c) 2015 TheHolyGrail. All rights reserved.
@@ -9,7 +9,7 @@
 import Foundation
 #if NOFRAMEWORKS
 #else
-import THGFoundation
+import ELFoundation
 #endif
 
 /**
@@ -132,7 +132,7 @@ public enum DispatchQueue {
     }
     
     private static func customQueue(label: String, concurrent: Bool, targetQueue: DispatchQueue?) -> DispatchQueue {
-        let bundle = NSBundle(forClass: THGDispatch.self)
+        let bundle = NSBundle(forClass: ELDispatch.self)
         let id = (bundle.reverseBundleIdentifier() ?? "") + "." + label
 
         let rawQueue: dispatch_queue_t = dispatch_queue_create(id, (concurrent ? DISPATCH_QUEUE_CONCURRENT : DISPATCH_QUEUE_SERIAL))
@@ -146,9 +146,9 @@ public enum DispatchQueue {
     }
 }
 
-public class THGDispatch {
+public class ELDispatch {
     init() {
         // using this because i want this thing to cry bloody murder if it's instantiated.
-        assertionFailure("Do not instantiate THGDispatch!")
+        assertionFailure("Do not instantiate ELDispatch!")
     }
 }

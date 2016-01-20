@@ -1,27 +1,27 @@
 # KillerRabbit [![Build Status](https://travis-ci.org/TheHolyGrail/KillerRabbit.svg)](https://travis-ci.org/TheHolyGrail/KillerRabbit)
 
-THGDispatch is a Swift framework that provides useful Swift language constructs to oft-used Grand Central Dispatch patterns such as Queues, Groups, Timer, Semaphore, etc.
+ELDispatch is a Swift framework that provides useful Swift language constructs to oft-used Grand Central Dispatch patterns such as Queues, Groups, Timer, Semaphore, etc.
 
 Grand Central Dispatch is a powerful library, but it can easily be difficult for someone to grasp how to use it well. With Swift, we can provide language constructs such as enumerations to allow dispatching closures to various prenamed priorities, such as .Background. We can also make using GCD groups easier through function chaining.
 
 ## Requirements
 
-KillerRabbit depends on [`THGFoundation.framework`](https://github.com/TheHolyGrail/Excalibur).
+KillerRabbit depends on [`ELFoundation.framework`](https://github.com/TheHolyGrail/ELFoundation).
 
 [THG](https://github.com/TheHolyGrail/) frameworks are designed to live side-by-side in the file system, like so:
 
 * \MyProject
-* \MyProject\Excalibur
+* \MyProject\ELFoundation
 * \MyProject\KillerRabbit
 
 
 ## Installation
 
-Install by adding `THGDispatch.xcodeproj` to your project and configuring your target to link `THGDispatch.framework`.
+Install by adding `ELDispatch.xcodeproj` to your project and configuring your target to link `ELDispatch.framework`.
 
 ## Getting Started
 
-THGDispatch/KillerRabbit was heavily influenced by John Estropia's GCDKit (https://github.com/JohnEstropia/GCDKit).  We love the work he's done, despite having taken a slightly different direction in syntax and implementation.
+ELDispatch/KillerRabbit was heavily influenced by John Estropia's GCDKit (https://github.com/JohnEstropia/GCDKit).  We love the work he's done, despite having taken a slightly different direction in syntax and implementation.
 
 The following constructs have been implemented:
 

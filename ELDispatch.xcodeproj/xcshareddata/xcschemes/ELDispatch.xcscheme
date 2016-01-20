@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "CA0CEA681A8A877200DF93E9"
-               BuildableName = "THGDispatch.framework"
-               BlueprintName = "THGDispatch"
-               ReferencedContainer = "container:THGDispatch.xcodeproj">
+               BuildableName = "ELDispatch.framework"
+               BlueprintName = "ELDispatch"
+               ReferencedContainer = "container:ELDispatch.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -29,9 +29,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "CA0CEA731A8A877200DF93E9"
-               BuildableName = "THGDispatchTests.xctest"
-               BlueprintName = "THGDispatchTests"
-               ReferencedContainer = "container:THGDispatch.xcodeproj">
+               BuildableName = "ELDispatchTests.xctest"
+               BlueprintName = "ELDispatchTests"
+               ReferencedContainer = "container:ELDispatch.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -47,9 +47,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "CA0CEA731A8A877200DF93E9"
-               BuildableName = "THGDispatchTests.xctest"
-               BlueprintName = "THGDispatchTests"
-               ReferencedContainer = "container:THGDispatch.xcodeproj">
+               BuildableName = "ELDispatchTests.xctest"
+               BlueprintName = "ELDispatchTests"
+               ReferencedContainer = "container:ELDispatch.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -57,9 +57,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "CA0CEA681A8A877200DF93E9"
-            BuildableName = "THGDispatch.framework"
-            BlueprintName = "THGDispatch"
-            ReferencedContainer = "container:THGDispatch.xcodeproj">
+            BuildableName = "ELDispatch.framework"
+            BlueprintName = "ELDispatch"
+            ReferencedContainer = "container:ELDispatch.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -79,9 +79,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "CA0CEA681A8A877200DF93E9"
-            BuildableName = "THGDispatch.framework"
-            BlueprintName = "THGDispatch"
-            ReferencedContainer = "container:THGDispatch.xcodeproj">
+            BuildableName = "ELDispatch.framework"
+            BlueprintName = "ELDispatch"
+            ReferencedContainer = "container:ELDispatch.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -97,9 +97,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "CA0CEA681A8A877200DF93E9"
-            BuildableName = "THGDispatch.framework"
-            BlueprintName = "THGDispatch"
-            ReferencedContainer = "container:THGDispatch.xcodeproj">
+            BuildableName = "ELDispatch.framework"
+            BlueprintName = "ELDispatch"
+            ReferencedContainer = "container:ELDispatch.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </ProfileAction>
