@@ -1,4 +1,4 @@
-# KillerRabbit [![Build Status](https://travis-ci.org/TheHolyGrail/KillerRabbit.svg)](https://travis-ci.org/TheHolyGrail/KillerRabbit)
+# KillerRabbit [![Build Status](https://travis-ci.org/WalmartLabs/KillerRabbit.svg)](https://travis-ci.org/WalmartLabs/KillerRabbit)
 
 ELDispatch is a Swift framework that provides useful Swift language constructs to oft-used Grand Central Dispatch patterns such as Queues, Groups, Timer, Semaphore, etc.
 
@@ -6,9 +6,9 @@ Grand Central Dispatch is a powerful library, but it can easily be difficult for
 
 ## Requirements
 
-KillerRabbit depends on [`ELFoundation.framework`](https://github.com/TheHolyGrail/ELFoundation).
+KillerRabbit depends on [`ELFoundation.framework`](https://github.com/WalmartLabs/ELFoundation).
 
-[THG](https://github.com/TheHolyGrail/) frameworks are designed to live side-by-side in the file system, like so:
+[THG](https://github.com/WalmartLabs/) frameworks are designed to live side-by-side in the file system, like so:
 
 * \MyProject
 * \MyProject\ELFoundation
@@ -111,7 +111,7 @@ semaphore.wait()
 
 We appreciate your contributions to all of our projects and look forward to interacting with you via Pull Requests, the issue tracker, via Twitter, etc.  We're happy to help you, and to have you help us.  We'll strive to answer every PR and issue and be very transparent in what we do.
 
-When contributing code, please refer to our Dennis (https://github.com/TheHolyGrail/Dennis).
+When contributing code, please refer to our Dennis (https://github.com/WalmartLabs/Dennis).
 
 ###### THG's Primary Contributors
 
@@ -126,7 +126,7 @@ Wes Ostler (@wesostler)<br>
 
 The MIT License (MIT)
 
-Copyright (c) 2015 Walmart, TheHolyGrail, and other Contributors
+Copyright (c) 2015 Walmart, WalmartLabs, and other Contributors
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
