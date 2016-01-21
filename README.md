@@ -1,4 +1,4 @@
-# KillerRabbit [![Build Status](https://travis-ci.org/WalmartLabs/KillerRabbit.svg)](https://travis-ci.org/WalmartLabs/KillerRabbit)
+# ELDispatch [![Build Status](https://travis-ci.org/Electrode-iOS/ELDispatch.svg)](https://travis-ci.org/Electrode-iOS/ELDispatch)
 
 ELDispatch is a Swift framework that provides useful Swift language constructs to oft-used Grand Central Dispatch patterns such as Queues, Groups, Timer, Semaphore, etc.
 
@@ -6,14 +6,13 @@ Grand Central Dispatch is a powerful library, but it can easily be difficult for
 
 ## Requirements
 
-KillerRabbit depends on [`ELFoundation.framework`](https://github.com/WalmartLabs/ELFoundation).
+ELDispatch requires Swift 2.1, Xcode 7.2 and depends on [`ELFoundation.framework`](https://github.com/Electrode-iOS/ELFoundation).
 
-[THG](https://github.com/WalmartLabs/) frameworks are designed to live side-by-side in the file system, like so:
+[Electrode-iOS](https://github.com/Electrode-iOS/) frameworks are designed to live side-by-side in the file system, like so:
 
 * \MyProject
 * \MyProject\ELFoundation
-* \MyProject\KillerRabbit
-
+* \MyProject\ELDispatch
 
 ## Installation
 
@@ -21,7 +20,7 @@ Install by adding `ELDispatch.xcodeproj` to your project and configuring your ta
 
 ## Getting Started
 
-ELDispatch/KillerRabbit was heavily influenced by John Estropia's GCDKit (https://github.com/JohnEstropia/GCDKit).  We love the work he's done, despite having taken a slightly different direction in syntax and implementation.
+ELDispatch was heavily influenced by John Estropia's GCDKit (https://github.com/JohnEstropia/GCDKit).  We love the work he's done, despite having taken a slightly different direction in syntax and implementation.
 
 The following constructs have been implemented:
 
@@ -113,20 +112,11 @@ We appreciate your contributions to all of our projects and look forward to inte
 
 When contributing code, please refer to our Dennis (https://github.com/WalmartLabs/Dennis).
 
-###### THG's Primary Contributors
-
-Dr. Sneed (@bsneed)<br>
-Steve Riggins (@steveriggins)<br>
-Sam Grover (@samgrover)<br>
-Angelo Di Paolo (@angelodipaolo)<br>
-Cody Garvin (@migs647)<br>
-Wes Ostler (@wesostler)<br>
-
 ## License
 
 The MIT License (MIT)
 
-Copyright (c) 2015 Walmart, WalmartLabs, and other Contributors
+Copyright (c) 2015 Walmart and other Contributors
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
