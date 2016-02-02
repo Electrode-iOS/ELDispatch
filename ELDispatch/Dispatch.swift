@@ -1,15 +1,15 @@
 //
 //  Dispatch.swift
-//  THGDispatch
+//  ELDispatch
 //
 //  Created by Brandon Sneed on 2/18/15.
-//  Copyright (c) 2015 TheHolyGrail. All rights reserved.
+//  Copyright (c) 2015 WalmartLabs. All rights reserved.
 //
 
 import Foundation
 #if NOFRAMEWORKS
 #else
-import THGFoundation
+import ELFoundation
 #endif
 
 /*
@@ -90,7 +90,7 @@ public struct Dispatch {
     */
     public func barrierAsync(queue: DispatchQueue, closure: () -> Void) -> DispatchClosure {
         switch queue {
-        case .Concurrent:
+        case .Concurrent( _):
             0 // do nothing.
         default:
             exceptionFailure("You can only dispatch barrier closures on a concurrent queue!")

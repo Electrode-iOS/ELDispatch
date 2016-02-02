@@ -1,15 +1,15 @@
 //
 //  DispatchTimer.swift
-//  THGDispatch
+//  ELDispatch
 //
 //  Created by Brandon Sneed on 2/15/15.
-//  Copyright (c) 2015 TheHolyGrail. All rights reserved.
+//  Copyright (c) 2015 WalmartLabs. All rights reserved.
 //
 
 import Foundation
 #if NOFRAMEWORKS
 #else
-import THGFoundation
+import ELFoundation
 #endif
 
 /**

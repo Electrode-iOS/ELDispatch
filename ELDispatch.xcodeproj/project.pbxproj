@@ -8,11 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		001EC91A1A92AC15007BC6C4 /* DispatchSemaphore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001EC9191A92AC15007BC6C4 /* DispatchSemaphore.swift */; };
-		001EC91E1A92D437007BC6C4 /* THGDispatchSemaphoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001EC91D1A92D437007BC6C4 /* THGDispatchSemaphoreTests.swift */; };
-		220E9EB51B8BE58E000863F6 /* THGFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 220E9EAE1B8BE44D000863F6 /* THGFoundation.framework */; };
-		2285B18E1B0AA7990088B07B /* THGFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2285B1891B0A9C600088B07B /* THGFoundation.framework */; };
-		CA0CEA6F1A8A877200DF93E9 /* THGDispatch.h in Headers */ = {isa = PBXBuildFile; fileRef = CA0CEA6E1A8A877200DF93E9 /* THGDispatch.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		CA0CEA7C1A8A877200DF93E9 /* THGDispatchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0CEA7B1A8A877200DF93E9 /* THGDispatchTests.swift */; };
+		001EC91E1A92D437007BC6C4 /* ELDispatchSemaphoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001EC91D1A92D437007BC6C4 /* ELDispatchSemaphoreTests.swift */; };
+		220E9EB51B8BE58E000863F6 /* ELFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 220E9EAE1B8BE44D000863F6 /* ELFoundation.framework */; };
+		2285B18E1B0AA7990088B07B /* ELFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2285B1891B0A9C600088B07B /* ELFoundation.framework */; };
+		CA0CEA6F1A8A877200DF93E9 /* ELDispatch.h in Headers */ = {isa = PBXBuildFile; fileRef = CA0CEA6E1A8A877200DF93E9 /* ELDispatch.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CA0CEA7C1A8A877200DF93E9 /* ELDispatchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0CEA7B1A8A877200DF93E9 /* ELDispatchTests.swift */; };
 		CA0CEA861A8A8B0D00DF93E9 /* DispatchQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0CEA851A8A8B0D00DF93E9 /* DispatchQueue.swift */; };
 		CA32AD861A91C5FF002FD1B9 /* DispatchGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA32AD851A91C5FF002FD1B9 /* DispatchGroup.swift */; };
 		CA58B25D1A91B08800C4B93E /* DispatchTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA58B25C1A91B08800C4B93E /* DispatchTimer.swift */; };
@@ -25,59 +25,59 @@
 /* Begin PBXContainerItemProxy section */
 		220E9EAD1B8BE44D000863F6 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 220E9EA61B8BE44D000863F6 /* THGFoundation.xcodeproj */;
+			containerPortal = 220E9EA61B8BE44D000863F6 /* ELFoundation.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = CACF2A0A1A9614D20084EFAE;
-			remoteInfo = THGFoundation;
+			remoteInfo = ELFoundation;
 		};
 		220E9EAF1B8BE44D000863F6 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 220E9EA61B8BE44D000863F6 /* THGFoundation.xcodeproj */;
+			containerPortal = 220E9EA61B8BE44D000863F6 /* ELFoundation.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = CACF2A151A9614D20084EFAE;
-			remoteInfo = THGFoundationTests;
+			remoteInfo = ELFoundationTests;
 		};
 		220E9EB11B8BE44D000863F6 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 220E9EA61B8BE44D000863F6 /* THGFoundation.xcodeproj */;
+			containerPortal = 220E9EA61B8BE44D000863F6 /* ELFoundation.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = CA8CD55A1B7A9DCA00DA8BF7;
-			remoteInfo = THGFoundation_osx;
+			remoteInfo = ELFoundation_osx;
 		};
 		220E9EB31B8BE44D000863F6 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 220E9EA61B8BE44D000863F6 /* THGFoundation.xcodeproj */;
+			containerPortal = 220E9EA61B8BE44D000863F6 /* ELFoundation.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = CA8CD5631B7A9DCB00DA8BF7;
-			remoteInfo = THGFoundation_osxTests;
+			remoteInfo = ELFoundation_osxTests;
 		};
 		CA0CEA761A8A877200DF93E9 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = CA0CEA601A8A877200DF93E9 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = CA0CEA681A8A877200DF93E9;
-			remoteInfo = THGDispatch;
+			remoteInfo = ELDispatch;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		001EC9191A92AC15007BC6C4 /* DispatchSemaphore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DispatchSemaphore.swift; sourceTree = "<group>"; };
-		001EC91D1A92D437007BC6C4 /* THGDispatchSemaphoreTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = THGDispatchSemaphoreTests.swift; sourceTree = "<group>"; };
-		220E9EA61B8BE44D000863F6 /* THGFoundation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = THGFoundation.xcodeproj; path = ../Excalibur/THGFoundation.xcodeproj; sourceTree = "<group>"; };
-		2285B1891B0A9C600088B07B /* THGFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = THGFoundation.framework; path = Carthage/Build/iOS/THGFoundation.framework; sourceTree = "<group>"; };
-		CA0CEA691A8A877200DF93E9 /* THGDispatch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = THGDispatch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		001EC91D1A92D437007BC6C4 /* ELDispatchSemaphoreTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ELDispatchSemaphoreTests.swift; sourceTree = "<group>"; };
+		220E9EA61B8BE44D000863F6 /* ELFoundation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ELFoundation.xcodeproj; path = ../ELFoundation/ELFoundation.xcodeproj; sourceTree = "<group>"; };
+		2285B1891B0A9C600088B07B /* ELFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ELFoundation.framework; path = Carthage/Build/iOS/ELFoundation.framework; sourceTree = "<group>"; };
+		CA0CEA691A8A877200DF93E9 /* ELDispatch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ELDispatch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA0CEA6D1A8A877200DF93E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CA0CEA6E1A8A877200DF93E9 /* THGDispatch.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = THGDispatch.h; sourceTree = "<group>"; };
-		CA0CEA741A8A877200DF93E9 /* THGDispatchTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = THGDispatchTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CA0CEA6E1A8A877200DF93E9 /* ELDispatch.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ELDispatch.h; sourceTree = "<group>"; };
+		CA0CEA741A8A877200DF93E9 /* ELDispatchTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ELDispatchTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA0CEA7A1A8A877200DF93E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CA0CEA7B1A8A877200DF93E9 /* THGDispatchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = THGDispatchTests.swift; sourceTree = "<group>"; };
+		CA0CEA7B1A8A877200DF93E9 /* ELDispatchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ELDispatchTests.swift; sourceTree = "<group>"; };
 		CA0CEA851A8A8B0D00DF93E9 /* DispatchQueue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DispatchQueue.swift; sourceTree = "<group>"; };
 		CA32AD851A91C5FF002FD1B9 /* DispatchGroup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DispatchGroup.swift; sourceTree = "<group>"; };
 		CA58B25C1A91B08800C4B93E /* DispatchTimer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DispatchTimer.swift; sourceTree = "<group>"; };
 		CA58B25E1A91B1C000C4B93E /* DispatchClosure.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DispatchClosure.swift; sourceTree = "<group>"; };
-		CA88043A1A96310D00C00CAE /* THGDispatchTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "THGDispatchTests-Bridging-Header.h"; sourceTree = "<group>"; };
-		CA88043B1A96310D00C00CAE /* XCTestCase+Exceptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "XCTestCase+Exceptions.h"; path = "../../Excalibur/THGFoundation/TestExtensions/XCTestCase+Exceptions.h"; sourceTree = "<group>"; };
-		CA88043C1A96310D00C00CAE /* XCTestCase+Exceptions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "XCTestCase+Exceptions.m"; path = "../../Excalibur/THGFoundation/TestExtensions/XCTestCase+Exceptions.m"; sourceTree = "<group>"; };
+		CA88043A1A96310D00C00CAE /* ELDispatchTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ELDispatchTests-Bridging-Header.h"; sourceTree = "<group>"; };
+		CA88043B1A96310D00C00CAE /* XCTestCase+Exceptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "XCTestCase+Exceptions.h"; path = "../../ELFoundation/ELFoundation/TestExtensions/XCTestCase+Exceptions.h"; sourceTree = "<group>"; };
+		CA88043C1A96310D00C00CAE /* XCTestCase+Exceptions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "XCTestCase+Exceptions.m"; path = "../../ELFoundation/ELFoundation/TestExtensions/XCTestCase+Exceptions.m"; sourceTree = "<group>"; };
 		CACF29AD1A9554660084EFAE /* Dispatch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dispatch.swift; sourceTree = "<group>"; };
 		CACF29FC1A9614930084EFAE /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		CACF29FD1A9614930084EFAE /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
@@ -88,7 +88,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				220E9EB51B8BE58E000863F6 /* THGFoundation.framework in Frameworks */,
+				220E9EB51B8BE58E000863F6 /* ELFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,7 +96,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2285B18E1B0AA7990088B07B /* THGFoundation.framework in Frameworks */,
+				2285B18E1B0AA7990088B07B /* ELFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -106,7 +106,7 @@
 		220E9EA51B8BE43D000863F6 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				220E9EA61B8BE44D000863F6 /* THGFoundation.xcodeproj */,
+				220E9EA61B8BE44D000863F6 /* ELFoundation.xcodeproj */,
 			);
 			name = Modules;
 			sourceTree = "<group>";
@@ -114,10 +114,10 @@
 		220E9EA71B8BE44D000863F6 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				220E9EAE1B8BE44D000863F6 /* THGFoundation.framework */,
-				220E9EB01B8BE44D000863F6 /* THGFoundationTests.xctest */,
-				220E9EB21B8BE44D000863F6 /* THGFoundation.framework */,
-				220E9EB41B8BE44D000863F6 /* THGFoundation_osxTests.xctest */,
+				220E9EAE1B8BE44D000863F6 /* ELFoundation.framework */,
+				220E9EB01B8BE44D000863F6 /* ELFoundationTests.xctest */,
+				220E9EB21B8BE44D000863F6 /* ELFoundation.framework */,
+				220E9EB41B8BE44D000863F6 /* ELFoundation_osxTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -125,7 +125,7 @@
 		2285B18C1B0A9CFD0088B07B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				2285B1891B0A9C600088B07B /* THGFoundation.framework */,
+				2285B1891B0A9C600088B07B /* ELFoundation.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -137,8 +137,8 @@
 				2285B18C1B0A9CFD0088B07B /* Frameworks */,
 				CACF29FC1A9614930084EFAE /* LICENSE */,
 				CACF29FD1A9614930084EFAE /* README.md */,
-				CA0CEA6B1A8A877200DF93E9 /* THGDispatch */,
-				CA0CEA781A8A877200DF93E9 /* THGDispatchTests */,
+				CA0CEA6B1A8A877200DF93E9 /* ELDispatch */,
+				CA0CEA781A8A877200DF93E9 /* ELDispatchTests */,
 				CA0CEA6A1A8A877200DF93E9 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -146,16 +146,16 @@
 		CA0CEA6A1A8A877200DF93E9 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				CA0CEA691A8A877200DF93E9 /* THGDispatch.framework */,
-				CA0CEA741A8A877200DF93E9 /* THGDispatchTests.xctest */,
+				CA0CEA691A8A877200DF93E9 /* ELDispatch.framework */,
+				CA0CEA741A8A877200DF93E9 /* ELDispatchTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		CA0CEA6B1A8A877200DF93E9 /* THGDispatch */ = {
+		CA0CEA6B1A8A877200DF93E9 /* ELDispatch */ = {
 			isa = PBXGroup;
 			children = (
-				CA0CEA6E1A8A877200DF93E9 /* THGDispatch.h */,
+				CA0CEA6E1A8A877200DF93E9 /* ELDispatch.h */,
 				CACF29AD1A9554660084EFAE /* Dispatch.swift */,
 				CA0CEA851A8A8B0D00DF93E9 /* DispatchQueue.swift */,
 				CA58B25E1A91B1C000C4B93E /* DispatchClosure.swift */,
@@ -164,7 +164,7 @@
 				001EC9191A92AC15007BC6C4 /* DispatchSemaphore.swift */,
 				CA0CEA6C1A8A877200DF93E9 /* Supporting Files */,
 			);
-			path = THGDispatch;
+			path = ELDispatch;
 			sourceTree = "<group>";
 		};
 		CA0CEA6C1A8A877200DF93E9 /* Supporting Files */ = {
@@ -175,15 +175,15 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		CA0CEA781A8A877200DF93E9 /* THGDispatchTests */ = {
+		CA0CEA781A8A877200DF93E9 /* ELDispatchTests */ = {
 			isa = PBXGroup;
 			children = (
 				CA8804341A96309700C00CAE /* XCTestExtensions */,
-				CA0CEA7B1A8A877200DF93E9 /* THGDispatchTests.swift */,
-				001EC91D1A92D437007BC6C4 /* THGDispatchSemaphoreTests.swift */,
+				CA0CEA7B1A8A877200DF93E9 /* ELDispatchTests.swift */,
+				001EC91D1A92D437007BC6C4 /* ELDispatchSemaphoreTests.swift */,
 				CA0CEA791A8A877200DF93E9 /* Supporting Files */,
 			);
-			path = THGDispatchTests;
+			path = ELDispatchTests;
 			sourceTree = "<group>";
 		};
 		CA0CEA791A8A877200DF93E9 /* Supporting Files */ = {
@@ -199,7 +199,7 @@
 			children = (
 				CA88043B1A96310D00C00CAE /* XCTestCase+Exceptions.h */,
 				CA88043C1A96310D00C00CAE /* XCTestCase+Exceptions.m */,
-				CA88043A1A96310D00C00CAE /* THGDispatchTests-Bridging-Header.h */,
+				CA88043A1A96310D00C00CAE /* ELDispatchTests-Bridging-Header.h */,
 			);
 			name = XCTestExtensions;
 			sourceTree = "<group>";
@@ -211,16 +211,16 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CA0CEA6F1A8A877200DF93E9 /* THGDispatch.h in Headers */,
+				CA0CEA6F1A8A877200DF93E9 /* ELDispatch.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		CA0CEA681A8A877200DF93E9 /* THGDispatch */ = {
+		CA0CEA681A8A877200DF93E9 /* ELDispatch */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CA0CEA7F1A8A877200DF93E9 /* Build configuration list for PBXNativeTarget "THGDispatch" */;
+			buildConfigurationList = CA0CEA7F1A8A877200DF93E9 /* Build configuration list for PBXNativeTarget "ELDispatch" */;
 			buildPhases = (
 				CA0CEA641A8A877200DF93E9 /* Sources */,
 				CA0CEA651A8A877200DF93E9 /* Frameworks */,
@@ -231,14 +231,14 @@
 			);
 			dependencies = (
 			);
-			name = THGDispatch;
-			productName = THGDispatch;
-			productReference = CA0CEA691A8A877200DF93E9 /* THGDispatch.framework */;
+			name = ELDispatch;
+			productName = ELDispatch;
+			productReference = CA0CEA691A8A877200DF93E9 /* ELDispatch.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		CA0CEA731A8A877200DF93E9 /* THGDispatchTests */ = {
+		CA0CEA731A8A877200DF93E9 /* ELDispatchTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CA0CEA821A8A877200DF93E9 /* Build configuration list for PBXNativeTarget "THGDispatchTests" */;
+			buildConfigurationList = CA0CEA821A8A877200DF93E9 /* Build configuration list for PBXNativeTarget "ELDispatchTests" */;
 			buildPhases = (
 				CA0CEA701A8A877200DF93E9 /* Sources */,
 				CA0CEA711A8A877200DF93E9 /* Frameworks */,
@@ -249,9 +249,9 @@
 			dependencies = (
 				CA0CEA771A8A877200DF93E9 /* PBXTargetDependency */,
 			);
-			name = THGDispatchTests;
-			productName = THGDispatchTests;
-			productReference = CA0CEA741A8A877200DF93E9 /* THGDispatchTests.xctest */;
+			name = ELDispatchTests;
+			productName = ELDispatchTests;
+			productReference = CA0CEA741A8A877200DF93E9 /* ELDispatchTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -263,7 +263,7 @@
 				LastSwiftMigration = 0700;
 				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0700;
-				ORGANIZATIONNAME = TheHolyGrail;
+				ORGANIZATIONNAME = WalmartLabs;
 				TargetAttributes = {
 					CA0CEA681A8A877200DF93E9 = {
 						CreatedOnToolsVersion = 6.3;
@@ -273,7 +273,7 @@
 					};
 				};
 			};
-			buildConfigurationList = CA0CEA631A8A877200DF93E9 /* Build configuration list for PBXProject "THGDispatch" */;
+			buildConfigurationList = CA0CEA631A8A877200DF93E9 /* Build configuration list for PBXProject "ELDispatch" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -286,43 +286,43 @@
 			projectReferences = (
 				{
 					ProductGroup = 220E9EA71B8BE44D000863F6 /* Products */;
-					ProjectRef = 220E9EA61B8BE44D000863F6 /* THGFoundation.xcodeproj */;
+					ProjectRef = 220E9EA61B8BE44D000863F6 /* ELFoundation.xcodeproj */;
 				},
 			);
 			projectRoot = "";
 			targets = (
-				CA0CEA681A8A877200DF93E9 /* THGDispatch */,
-				CA0CEA731A8A877200DF93E9 /* THGDispatchTests */,
+				CA0CEA681A8A877200DF93E9 /* ELDispatch */,
+				CA0CEA731A8A877200DF93E9 /* ELDispatchTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		220E9EAE1B8BE44D000863F6 /* THGFoundation.framework */ = {
+		220E9EAE1B8BE44D000863F6 /* ELFoundation.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
-			path = THGFoundation.framework;
+			path = ELFoundation.framework;
 			remoteRef = 220E9EAD1B8BE44D000863F6 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		220E9EB01B8BE44D000863F6 /* THGFoundationTests.xctest */ = {
+		220E9EB01B8BE44D000863F6 /* ELFoundationTests.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
-			path = THGFoundationTests.xctest;
+			path = ELFoundationTests.xctest;
 			remoteRef = 220E9EAF1B8BE44D000863F6 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		220E9EB21B8BE44D000863F6 /* THGFoundation.framework */ = {
+		220E9EB21B8BE44D000863F6 /* ELFoundation.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
-			path = THGFoundation.framework;
+			path = ELFoundation.framework;
 			remoteRef = 220E9EB11B8BE44D000863F6 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		220E9EB41B8BE44D000863F6 /* THGFoundation_osxTests.xctest */ = {
+		220E9EB41B8BE44D000863F6 /* ELFoundation_osxTests.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
-			path = THGFoundation_osxTests.xctest;
+			path = ELFoundation_osxTests.xctest;
 			remoteRef = 220E9EB31B8BE44D000863F6 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
@@ -364,9 +364,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				001EC91E1A92D437007BC6C4 /* THGDispatchSemaphoreTests.swift in Sources */,
+				001EC91E1A92D437007BC6C4 /* ELDispatchSemaphoreTests.swift in Sources */,
 				CA88043D1A96310D00C00CAE /* XCTestCase+Exceptions.m in Sources */,
-				CA0CEA7C1A8A877200DF93E9 /* THGDispatchTests.swift in Sources */,
+				CA0CEA7C1A8A877200DF93E9 /* ELDispatchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -375,7 +375,7 @@
 /* Begin PBXTargetDependency section */
 		CA0CEA771A8A877200DF93E9 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = CA0CEA681A8A877200DF93E9 /* THGDispatch */;
+			target = CA0CEA681A8A877200DF93E9 /* ELDispatch */;
 			targetProxy = CA0CEA761A8A877200DF93E9 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -567,12 +567,11 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_SEARCH_PATHS = "";
-				INFOPLIST_FILE = THGDispatch/Info.plist;
+				INFOPLIST_FILE = ELDispatch/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "io.theholygrail.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.walmartlabs.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -587,12 +586,11 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_SEARCH_PATHS = "";
-				INFOPLIST_FILE = THGDispatch/Info.plist;
+				INFOPLIST_FILE = ELDispatch/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "io.theholygrail.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.walmartlabs.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};
@@ -602,20 +600,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
-				);
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = THGDispatchTests/Info.plist;
+				INFOPLIST_FILE = ELDispatchTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.theholygrail.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.walmartlabs.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "THGDispatchTests/THGDispatchTests-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "ELDispatchTests/ELDispatchTests-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -624,23 +617,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
-				);
-				INFOPLIST_FILE = THGDispatchTests/Info.plist;
+				INFOPLIST_FILE = ELDispatchTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.theholygrail.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.walmartlabs.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "THGDispatchTests/THGDispatchTests-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "ELDispatchTests/ELDispatchTests-Bridging-Header.h";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		CA0CEA631A8A877200DF93E9 /* Build configuration list for PBXProject "THGDispatch" */ = {
+		CA0CEA631A8A877200DF93E9 /* Build configuration list for PBXProject "ELDispatch" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CA0CEA7D1A8A877200DF93E9 /* Debug */,
@@ -650,7 +638,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CA0CEA7F1A8A877200DF93E9 /* Build configuration list for PBXNativeTarget "THGDispatch" */ = {
+		CA0CEA7F1A8A877200DF93E9 /* Build configuration list for PBXNativeTarget "ELDispatch" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CA0CEA801A8A877200DF93E9 /* Debug */,
@@ -660,7 +648,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CA0CEA821A8A877200DF93E9 /* Build configuration list for PBXNativeTarget "THGDispatchTests" */ = {
+		CA0CEA821A8A877200DF93E9 /* Build configuration list for PBXNativeTarget "ELDispatchTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CA0CEA831A8A877200DF93E9 /* Debug */,

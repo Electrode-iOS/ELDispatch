@@ -1,10 +1,10 @@
 {
   "modules" : [
     {
-      "name" : "Excalibur",
+      "name" : "ELFoundation",
       "initialBranch" : "master",
-      "sourcePath" : "THGFoundation.xcodeproj",
-      "moduleURL" : "git@github.com:TheHolyGrail\/Excalibur.git"
+      "sourcePath" : "ELFoundation.xcodeproj",
+      "moduleURL" : "git@github.com:WalmartLabs\/ELFoundation.git"
     }
   ],
   "modulesPath" : "..\/",

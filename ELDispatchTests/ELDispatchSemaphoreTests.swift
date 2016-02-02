@@ -1,16 +1,16 @@
 //
-//  THGDispatchSemaphoreTests.swift
-//  THGDispatch
+//  ELDispatchSemaphoreTests.swift
+//  ELDispatch
 //
 //  Created by Steven W. Riggins on 2/16/15.
-//  Copyright (c) 2015 TheHolyGrail. All rights reserved.
+//  Copyright (c) 2015 WalmartLabs. All rights reserved.
 //
 
 import UIKit
 import XCTest
-import THGDispatch
+import ELDispatch
 
-class THGDispatchSemaphoreTests: XCTestCase {
+class ELDispatchSemaphoreTests: XCTestCase {
     
     // Test a semaphore protecting two resources
     // Fire off three background tasks, each waiting 2 seconds

@@ -1,31 +1,26 @@
-# KillerRabbit
-THGDispatch module, includes GCD bits such as Queues, Groups, Timer, Semaphore, etc.
+# ELDispatch [![Build Status](https://travis-ci.org/Electrode-iOS/ELDispatch.svg)](https://travis-ci.org/Electrode-iOS/ELDispatch)
 
-Provides useful Swift language constructs to oft-used Grand Central Dispatch patterns
+ELDispatch is a Swift framework that provides useful Swift language constructs to oft-used Grand Central Dispatch patterns such as Queues, Groups, Timer, Semaphore, etc.
 
-Grand Central Dispatch is a powerful framework, but it can easily be difficult for someone to grasp how to use it well. With Swift, we can provide language constructs such as enumerations to allow dispatching closures to various prenamed priorities, such as .Background. We can also make using GCD groups easier through function chaining.
+Grand Central Dispatch is a powerful library, but it can easily be difficult for someone to grasp how to use it well. With Swift, we can provide language constructs such as enumerations to allow dispatching closures to various prenamed priorities, such as .Background. We can also make using GCD groups easier through function chaining.
 
-___
+## Requirements
 
-## A quick word about dependencies
+ELDispatch requires Swift 2.1, Xcode 7.2 and depends on [`ELFoundation.framework`](https://github.com/Electrode-iOS/ELFoundation).
 
-THGDispatch/KillerRabbit depends on THGFoundation/Excalibur (https://github.com/TheHolyGrail/Excalibur).  
-
-THG projects are designed to live side-by-side in the file system.  ie:
+[Electrode-iOS](https://github.com/Electrode-iOS/) frameworks are designed to live side-by-side in the file system, like so:
 
 * \MyProject
-* \MyProject\Excalibur
-* \MyProject\KillerRabbit
+* \MyProject\ELFoundation
+* \MyProject\ELDispatch
 
-We use an experimental tool called Modulo for dependency management.  It doesn't require Xcode workspaces, mess with your project, or have arcane config files that break every release, it's simple JSON.  It also doesn't require your dependencies to use Modulo either.  If you're using Modulo, you can also link to an existing git repo that doesn't use Modulo, it doesn't care.
+## Installation
 
-That being said.. you don't have to use Modulo!  You can simple add both of these github projects as submodules and it'll work just the same.
+Install by adding `ELDispatch.xcodeproj` to your project and configuring your target to link `ELDispatch.framework`.
 
-Now back to the good stuff....
+## Getting Started
 
-## Introduction
-
-THGDispatch/KillerRabbit was heavily influenced by John Estropia's GCDKit (https://github.com/JohnEstropia/GCDKit).  We love the work he's done, despite having taken a slightly different direction in syntax and implementation.
+ELDispatch was heavily influenced by John Estropia's GCDKit (https://github.com/JohnEstropia/GCDKit).  We love the work he's done, despite having taken a slightly different direction in syntax and implementation.
 
 The following constructs have been implemented:
 
@@ -115,22 +110,13 @@ semaphore.wait()
 
 We appreciate your contributions to all of our projects and look forward to interacting with you via Pull Requests, the issue tracker, via Twitter, etc.  We're happy to help you, and to have you help us.  We'll strive to answer every PR and issue and be very transparent in what we do.
 
-When contributing code, please refer to our Dennis (https://github.com/TheHolyGrail/Dennis).
-
-###### THG's Primary Contributors
-
-Dr. Sneed (@bsneed)<br>
-Steve Riggins (@steveriggins)<br>
-Sam Grover (@samgrover)<br>
-Angelo Di Paolo (@angelodipaolo)<br>
-Cody Garvin (@migs647)<br>
-Wes Ostler (@wesostler)<br>
+When contributing code, please refer to our Dennis (https://github.com/WalmartLabs/Dennis).
 
 ## License
 
 The MIT License (MIT)
 
-Copyright (c) 2015 Walmart, TheHolyGrail, and other Contributors
+Copyright (c) 2015 Walmart and other Contributors
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
