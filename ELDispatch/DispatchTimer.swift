@@ -109,17 +109,18 @@ public class DispatchTimer {
     public var suspended: Bool {
         get {
             return lock.around {
-                self.suspended
+                return self.isSuspended
             }
         }
         
         set(value) {
             lock.around {
-                self.suspended = value
+                self.isSuspended = value
             }
         }
     }
     
     private var rawTimer: dispatch_source_t? = nil
     private let lock: Spinlock = Spinlock()
+    private var isSuspended: Bool = false
 }
