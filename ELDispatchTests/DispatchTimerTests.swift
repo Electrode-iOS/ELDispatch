@@ -21,15 +21,28 @@ class DispatchTimerTests: XCTestCase {
         super.tearDown()
     }
 
-//    func testSchedule() {
-//        let expectation = self.expectationWithDescription("timer fired")
-//        let serialQueue = DispatchQueue.Background
-//        let timer = DispatchTimer()
-//        timer.schedule(serialQueue, interval: 5) {
-//            expectation.fulfill()
-//        }
-//        NSRunLoop.currentRunLoop().runUntilDate(NSDate.distantPast())
-//        self.waitForExpectationsWithTimeout(10, handler: nil)
-//    }
+    func testSchedule() {
+        let expectation = self.expectationWithDescription("timer fired")
+        let serialQueue = DispatchQueue.Background
+        let timer = DispatchTimer()
+        timer.schedule(serialQueue, interval: 1) {
+            expectation.fulfill()
+        }
 
+        self.waitForExpectationsWithTimeout(10, handler: nil)
+    }
+
+    func testScheduleSuspended() {
+        let expectation = self.expectationWithDescription("timer fired")
+        let serialQueue = DispatchQueue.Background
+        let timer = DispatchTimer()
+        timer.schedule(serialQueue, interval: 1, delay: 0, leeway: 1, suspended: true) {
+            expectation.fulfill()
+        }
+        
+        timer.resume()
+        
+        self.waitForExpectationsWithTimeout(10, handler: nil)
+    }
+    
 }
