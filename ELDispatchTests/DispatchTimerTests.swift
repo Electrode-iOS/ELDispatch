@@ -23,9 +23,9 @@ class DispatchTimerTests: XCTestCase {
 
     func testSchedule() {
         let expectation = self.expectationWithDescription("timer fired")
-        let serialQueue = DispatchQueue.Background
+        let queue = DispatchQueue.Background
         let timer = DispatchTimer()
-        timer.schedule(serialQueue, interval: 1) {
+        timer.schedule(queue, interval: 1) {
             expectation.fulfill()
         }
 
@@ -34,9 +34,9 @@ class DispatchTimerTests: XCTestCase {
 
     func testScheduleSuspended() {
         let expectation = self.expectationWithDescription("timer fired")
-        let serialQueue = DispatchQueue.Background
+        let queue = DispatchQueue.Background
         let timer = DispatchTimer()
-        timer.schedule(serialQueue, interval: 1, delay: 0, leeway: 1, suspended: true) {
+        timer.schedule(queue, interval: 1, delay: 0, leeway: 1, suspended: true) {
             expectation.fulfill()
         }
         
@@ -45,4 +45,30 @@ class DispatchTimerTests: XCTestCase {
         self.waitForExpectationsWithTimeout(10, handler: nil)
     }
     
+    func testScheduleCancel() {
+        let expectation = self.expectationWithDescription("test value checked")
+        let queue = DispatchQueue.createSerial("serial")
+        
+        var testValue = 1
+        
+        let timer2 = DispatchTimer()
+        timer2.schedule(queue, interval: 1) {
+            testValue = 10
+        }
+        
+        let timer1 = DispatchTimer()
+        timer1.schedule(queue, interval: 2) {
+            testValue = 7
+        }
+        
+        let timer3 = DispatchTimer()
+        timer3.schedule(queue, interval: 4) {
+            XCTAssertEqual(testValue, 10)
+            expectation.fulfill()
+        }
+        
+        timer1.cancel()
+        
+        self.waitForExpectationsWithTimeout(5, handler: nil)
+    }
 }
