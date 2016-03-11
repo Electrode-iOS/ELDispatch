@@ -32,7 +32,7 @@ class DispatchTimerTests: XCTestCase {
         self.waitForExpectationsWithTimeout(10, handler: nil)
     }
 
-    func testScheduleSuspended() {
+    func testScheduleSuspendedStart() {
         let expectation = self.expectationWithDescription("timer fired")
         let queue = DispatchQueue.Background
         let timer = DispatchTimer()
@@ -61,7 +61,7 @@ class DispatchTimerTests: XCTestCase {
         XCTAssertTrue(testValue > 3)
     }
     
-    func testScheduleCancel() {
+    func testCancel() {
         let queue = DispatchQueue.Background
         var testValue = 0
         
@@ -83,5 +83,39 @@ class DispatchTimerTests: XCTestCase {
         }
         
         XCTAssertTrue(testValue == finalTestValue)
+    }
+    
+    func testSuspendAndResume() {
+        let queue = DispatchQueue.Background
+        var testValue = 0
+        
+        let timer = DispatchTimer()
+        timer.schedule(queue, interval: 0.25) {
+            testValue += 1
+        }
+        
+        self.waitForConditionsWithTimeout(1) { () -> Bool in
+            return false
+        }
+        
+        XCTAssertTrue(testValue > 3)
+        
+        let preSuspendTestValue = testValue
+        
+        timer.suspend()
+        XCTAssertTrue(timer.suspended)
+        
+        self.waitForConditionsWithTimeout(0.5) { () -> Bool in
+            return false
+        }
+        
+        XCTAssertTrue(testValue == preSuspendTestValue)
+        timer.resume()
+        
+        self.waitForConditionsWithTimeout(0.5) { () -> Bool in
+            return false
+        }
+        
+        XCTAssertTrue(testValue > preSuspendTestValue)
     }
 }
