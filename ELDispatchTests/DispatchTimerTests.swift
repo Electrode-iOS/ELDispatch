@@ -44,31 +44,44 @@ class DispatchTimerTests: XCTestCase {
         
         self.waitForExpectationsWithTimeout(10, handler: nil)
     }
+
+    func testScheduleRepetition() {
+        let queue = DispatchQueue.Background
+        var testValue = 0
+        
+        let timer = DispatchTimer()
+        timer.schedule(queue, interval: 0.25) {
+            testValue += 1
+        }
+        
+        self.waitForConditionsWithTimeout(1) { () -> Bool in
+            return false
+        }
+        
+        XCTAssertTrue(testValue > 3)
+    }
     
     func testScheduleCancel() {
-        let expectation = self.expectationWithDescription("test value checked")
-        let queue = DispatchQueue.createSerial("serial")
+        let queue = DispatchQueue.Background
+        var testValue = 0
         
-        var testValue = 1
-        
-        let timer2 = DispatchTimer()
-        timer2.schedule(queue, interval: 1) {
-            testValue = 10
+        let timer = DispatchTimer()
+        timer.schedule(queue, interval: 0.25) {
+            testValue += 1
         }
         
-        let timer1 = DispatchTimer()
-        timer1.schedule(queue, interval: 2) {
-            testValue = 7
+        self.waitForConditionsWithTimeout(1) { () -> Bool in
+            return false
         }
         
-        let timer3 = DispatchTimer()
-        timer3.schedule(queue, interval: 4) {
-            XCTAssertEqual(testValue, 10)
-            expectation.fulfill()
+        XCTAssertTrue(testValue > 3)
+        let finalTestValue = testValue
+        timer.cancel()
+
+        self.waitForConditionsWithTimeout(0.5) { () -> Bool in
+            return false
         }
         
-        timer1.cancel()
-        
-        self.waitForExpectationsWithTimeout(5, handler: nil)
+        XCTAssertTrue(testValue == finalTestValue)
     }
 }
