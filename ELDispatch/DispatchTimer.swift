@@ -50,14 +50,8 @@ public class DispatchTimer {
                 // do nothing.
             }
         }
-        self.rawTimer = rawTimer
         
-        let wrappedClosure = {
-            if dispatch_source_testcancel(self.rawTimer!) == 0 {
-                dispatch_source_cancel(self.rawTimer!)
-            }
-            closure()
-        }
+        self.rawTimer = rawTimer
         
         var startTime: dispatch_time_t
         
@@ -70,14 +64,14 @@ public class DispatchTimer {
         let repeatInterval = UInt64(interval * NSTimeInterval(NSEC_PER_SEC))
         let leewayTime = UInt64(leeway * NSTimeInterval(NSEC_PER_SEC))
         
-        dispatch_source_set_event_handler(rawTimer, wrappedClosure)
+        dispatch_source_set_event_handler(rawTimer, closure)
         dispatch_source_set_timer(rawTimer, startTime, repeatInterval, leewayTime)
         
         if suspended == false {
             dispatch_resume(rawTimer)
         }
         
-        return DispatchClosure(wrappedClosure)
+        return DispatchClosure(closure)
     }
     
     /**
