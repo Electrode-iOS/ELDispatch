@@ -34,15 +34,24 @@ public class DispatchTimer {
     - parameter suspended: The timer will be created in a suspended state.
     - parameter closure: The closure to execute.
     */
-    public func schedule(queue: DispatchQueue, interval: NSTimeInterval, delay: NSTimeInterval = 0, leeway: NSTimeInterval = 0.2, suspended: Bool = false, _ closure: () -> Void) -> DispatchClosure {
+    public func schedule(queue: DispatchQueue, interval: NSTimeInterval, delay: NSTimeInterval = 0, leeway: NSTimeInterval = 1, suspended: Bool = false, _ closure: () -> Void) -> DispatchClosure {
         // if we have a timer object already, lets bolt.
         if rawTimer != nil {
             exceptionFailure("A timer has already been scheduled!")
         }
         
-        rawTimer = dispatch_source_create(DISPATCH_SOURCE_TYPE_TIMER, 0, 0, queue.dispatchQueue())
+        // set this to the opposite of the 'suspeded' var that came in.
+        // it'll get set to the proper state after.
+        isSuspended = suspended
         
-        let wrappedClosure = DispatchClosure(closure)
+        guard let rawTimer = dispatch_source_create(DISPATCH_SOURCE_TYPE_TIMER, 0, 0, queue.dispatchQueue()) else {
+            exceptionFailure("The timer dispatch source was unable to be created.")
+            return DispatchClosure {
+                // do nothing.
+            }
+        }
+        
+        self.rawTimer = rawTimer
         
         var startTime: dispatch_time_t
         
@@ -55,14 +64,14 @@ public class DispatchTimer {
         let repeatInterval = UInt64(interval * NSTimeInterval(NSEC_PER_SEC))
         let leewayTime = UInt64(leeway * NSTimeInterval(NSEC_PER_SEC))
         
-        dispatch_source_set_timer(rawTimer!, startTime, repeatInterval, leewayTime)
-        dispatch_source_set_event_handler(rawTimer!, wrappedClosure.dispatchClosure())
+        dispatch_source_set_event_handler(rawTimer, closure)
+        dispatch_source_set_timer(rawTimer, startTime, repeatInterval, leewayTime)
         
         if suspended == false {
-            resume()
+            dispatch_resume(rawTimer)
         }
         
-        return wrappedClosure
+        return DispatchClosure(closure)
     }
     
     /**
@@ -109,17 +118,18 @@ public class DispatchTimer {
     public var suspended: Bool {
         get {
             return lock.around {
-                self.suspended
+                return self.isSuspended
             }
         }
         
         set(value) {
             lock.around {
-                self.suspended = value
+                self.isSuspended = value
             }
         }
     }
     
     private var rawTimer: dispatch_source_t? = nil
     private let lock: Spinlock = Spinlock()
+    private var isSuspended: Bool = false
 }
