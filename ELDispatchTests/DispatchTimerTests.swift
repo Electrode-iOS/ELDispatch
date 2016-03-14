@@ -54,9 +54,11 @@ class DispatchTimerTests: XCTestCase {
             testValue += 1
         }
         
-        try! self.waitForConditionsWithTimeout(1) { () -> Bool in
-            return false
-        }
+        do {
+            try self.waitForConditionsWithTimeout(1) { () -> Bool in
+                return false
+            }
+        } catch {}
         
         XCTAssertTrue(testValue > 3)
     }
@@ -70,17 +72,21 @@ class DispatchTimerTests: XCTestCase {
             testValue += 1
         }
         
-        try! self.waitForConditionsWithTimeout(1) { () -> Bool in
-            return false
-        }
+        do {
+            try self.waitForConditionsWithTimeout(1) { () -> Bool in
+                return false
+            }
+        } catch {}
         
         XCTAssertTrue(testValue > 3)
         let finalTestValue = testValue
         timer.cancel()
 
-        try! self.waitForConditionsWithTimeout(0.5) { () -> Bool in
-            return false
-        }
+        do {
+            try self.waitForConditionsWithTimeout(0.5) { () -> Bool in
+                return false
+            }
+        } catch {}
         
         XCTAssertTrue(testValue == finalTestValue)
     }
@@ -94,9 +100,11 @@ class DispatchTimerTests: XCTestCase {
             testValue += 1
         }
         
-        try! self.waitForConditionsWithTimeout(1) { () -> Bool in
-            return false
-        }
+        do {
+            try self.waitForConditionsWithTimeout(1) { () -> Bool in
+                return false
+            }
+        } catch {}
         
         XCTAssertTrue(testValue > 3)
         
@@ -105,16 +113,20 @@ class DispatchTimerTests: XCTestCase {
         timer.suspend()
         XCTAssertTrue(timer.suspended)
         
-        try! self.waitForConditionsWithTimeout(0.5) { () -> Bool in
-            return false
-        }
+        do {
+            try self.waitForConditionsWithTimeout(0.5) { () -> Bool in
+                return false
+            }
+        } catch {}
         
         XCTAssertTrue(testValue == preSuspendTestValue)
         timer.resume()
         
-        try! self.waitForConditionsWithTimeout(0.5) { () -> Bool in
-            return false
-        }
+        do {
+            try self.waitForConditionsWithTimeout(0.5) { () -> Bool in
+                return false
+            }
+        } catch {}
         
         XCTAssertTrue(testValue > preSuspendTestValue)
     }
