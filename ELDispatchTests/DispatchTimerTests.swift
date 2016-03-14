@@ -54,7 +54,7 @@ class DispatchTimerTests: XCTestCase {
             testValue += 1
         }
         
-        self.waitForConditionsWithTimeout(1) { () -> Bool in
+        try! self.waitForConditionsWithTimeout(1) { () -> Bool in
             return false
         }
         
@@ -70,7 +70,7 @@ class DispatchTimerTests: XCTestCase {
             testValue += 1
         }
         
-        self.waitForConditionsWithTimeout(1) { () -> Bool in
+        try! self.waitForConditionsWithTimeout(1) { () -> Bool in
             return false
         }
         
@@ -78,7 +78,7 @@ class DispatchTimerTests: XCTestCase {
         let finalTestValue = testValue
         timer.cancel()
 
-        self.waitForConditionsWithTimeout(0.5) { () -> Bool in
+        try! self.waitForConditionsWithTimeout(0.5) { () -> Bool in
             return false
         }
         
@@ -94,7 +94,7 @@ class DispatchTimerTests: XCTestCase {
             testValue += 1
         }
         
-        self.waitForConditionsWithTimeout(1) { () -> Bool in
+        try! self.waitForConditionsWithTimeout(1) { () -> Bool in
             return false
         }
         
@@ -105,14 +105,14 @@ class DispatchTimerTests: XCTestCase {
         timer.suspend()
         XCTAssertTrue(timer.suspended)
         
-        self.waitForConditionsWithTimeout(0.5) { () -> Bool in
+        try! self.waitForConditionsWithTimeout(0.5) { () -> Bool in
             return false
         }
         
         XCTAssertTrue(testValue == preSuspendTestValue)
         timer.resume()
         
-        self.waitForConditionsWithTimeout(0.5) { () -> Bool in
+        try! self.waitForConditionsWithTimeout(0.5) { () -> Bool in
             return false
         }
         
