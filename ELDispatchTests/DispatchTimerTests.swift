@@ -47,43 +47,49 @@ class DispatchTimerTests: XCTestCase {
 
     func testScheduleRepetition() {
         let queue = DispatchQueue.Background
+        let interval = 0.1
         var testValue = 0
         
         let timer = DispatchTimer()
-        timer.schedule(queue, interval: 0.25) {
+        timer.schedule(queue, interval: interval) {
             testValue += 1
         }
         
         do {
-            try self.waitForConditionsWithTimeout(1) { () -> Bool in
-                return false
+            try self.waitForConditionsWithTimeout(1) {
+                return testValue > 3
             }
-        } catch {}
+        } catch {
+            XCTAssertTrue(false, "Timed out waiting for repetition")
+        }
         
         XCTAssertTrue(testValue > 3)
     }
     
     func testCancel() {
         let queue = DispatchQueue.Background
+        let interval = 0.1
         var testValue = 0
         
         let timer = DispatchTimer()
-        timer.schedule(queue, interval: 0.25) {
+        timer.schedule(queue, interval: interval) {
             testValue += 1
         }
         
         do {
-            try self.waitForConditionsWithTimeout(1) { () -> Bool in
-                return false
+            try self.waitForConditionsWithTimeout(1) {
+                return testValue > 2
             }
-        } catch {}
+        } catch {
+            XCTAssertTrue(false, "Timed out waiting for repetition")
+        }
         
-        XCTAssertTrue(testValue > 3)
+        XCTAssertTrue(testValue > 2)
         let finalTestValue = testValue
         timer.cancel()
 
         do {
-            try self.waitForConditionsWithTimeout(0.5) { () -> Bool in
+            try self.waitForConditionsWithTimeout(interval * 2) { () -> Bool in
                 return false
             }
         } catch {}
@@ -93,20 +99,23 @@ class DispatchTimerTests: XCTestCase {
     
     func testSuspendAndResume() {
         let queue = DispatchQueue.Background
+        let interval = 0.1
         var testValue = 0
         
         let timer = DispatchTimer()
-        timer.schedule(queue, interval: 0.25) {
+        timer.schedule(queue, interval: interval) {
             testValue += 1
         }
         
         do {
-            try self.waitForConditionsWithTimeout(1) { () -> Bool in
-                return false
+            try self.waitForConditionsWithTimeout(1) {
+                return testValue > 2
             }
-        } catch {}
+        } catch {
+            XCTAssertTrue(false, "Timed out waiting for repetition")
+        }
         
-        XCTAssertTrue(testValue > 3)
+        XCTAssertTrue(testValue > 2)
         
         let preSuspendTestValue = testValue
         
@@ -114,7 +123,7 @@ class DispatchTimerTests: XCTestCase {
         XCTAssertTrue(timer.suspended)
         
         do {
-            try self.waitForConditionsWithTimeout(0.5) { () -> Bool in
+            try self.waitForConditionsWithTimeout(interval * 2) { () -> Bool in
                 return false
             }
         } catch {}
@@ -123,10 +132,12 @@ class DispatchTimerTests: XCTestCase {
         timer.resume()
         
         do {
-            try self.waitForConditionsWithTimeout(0.5) { () -> Bool in
-                return false
+            try self.waitForConditionsWithTimeout(interval * 2) {
+                return testValue > preSuspendTestValue
             }
-        } catch {}
+        } catch {
+            XCTAssertTrue(false, "Timed out waiting for repetition")
+        }
         
         XCTAssertTrue(testValue > preSuspendTestValue)
     }
