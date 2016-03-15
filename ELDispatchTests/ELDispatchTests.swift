@@ -38,12 +38,10 @@ class ELDispatchTests: XCTestCase {
         let expectation1: XCTestExpectation = self.expectationWithDescription("block gets executed")
         
         Dispatch().async(.Background) {
-            // sleep longer than the waitForExpectationsWithTimeout does.
-            sleep(3)
             expectation1.fulfill()
         }.wait()
         
-        self.waitForExpectationsWithTimeout(0, handler: nil)
+        self.waitForExpectationsWithTimeout(1, handler: nil)
         
     }
     
@@ -68,15 +66,13 @@ class ELDispatchTests: XCTestCase {
         let expectation2: XCTestExpectation = self.expectationWithDescription("main thread was notified")
         
         Dispatch().sync(.Background) {
-            // sleep longer than the waitForExpectationsWithTimeout does.
-            sleep(3)
             expectation1.fulfill()
         }.notify(.Main) {
             XCTAssertTrue(NSThread.isMainThread())
             expectation2.fulfill()
         }
         
-        self.waitForExpectationsWithTimeout(0, handler: nil)
+        self.waitForExpectationsWithTimeout(1, handler: nil)
     }
 
     func testGroupAndNotify() {
