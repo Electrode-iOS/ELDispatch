@@ -1,5 +1,5 @@
 language: objective-c
-osx_image: xcode7.2
+osx_image: xcode7.3
 
 install: 
   - git clone https://github.com/Electrode-iOS/ELFoundation.git ../ELFoundation
