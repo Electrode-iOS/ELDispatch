@@ -52,6 +52,13 @@
 			remoteGlobalIDString = CA8CD5631B7A9DCB00DA8BF7;
 			remoteInfo = ELFoundation_osxTests;
 		};
+		4894C67F1D42EEBA00BCE9C3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 220E9EA61B8BE44D000863F6 /* ELFoundation.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = CACF2A091A9614D20084EFAE;
+			remoteInfo = ELFoundation;
+		};
 		CA0CEA761A8A877200DF93E9 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = CA0CEA601A8A877200DF93E9 /* Project object */;
@@ -233,6 +240,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				4894C6801D42EEBA00BCE9C3 /* PBXTargetDependency */,
 			);
 			name = ELDispatch;
 			productName = ELDispatch;
@@ -377,6 +385,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		4894C6801D42EEBA00BCE9C3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = ELFoundation;
+			targetProxy = 4894C67F1D42EEBA00BCE9C3 /* PBXContainerItemProxy */;
+		};
 		CA0CEA771A8A877200DF93E9 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = CA0CEA681A8A877200DF93E9 /* ELDispatch */;
