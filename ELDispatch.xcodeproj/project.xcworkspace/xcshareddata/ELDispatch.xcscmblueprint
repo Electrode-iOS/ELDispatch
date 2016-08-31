@@ -9,8 +9,8 @@
   },
   "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "F17382F0-8E26-4CAC-B317-FB495D7D7FA6",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
-    "7D51FEE86695D298E2BDAEA0A5938727BE31AF7D" : "KillerRabbit",
-    "8793D34A7BF94DA191D8F935B1E0425A8C1B2681" : "ELFoundation"
+    "7D51FEE86695D298E2BDAEA0A5938727BE31AF7D" : "ELDispatch\/",
+    "8793D34A7BF94DA191D8F935B1E0425A8C1B2681" : "ELFoundation\/"
   },
   "DVTSourceControlWorkspaceBlueprintNameKey" : "ELDispatch",
   "DVTSourceControlWorkspaceBlueprintVersion" : 204,
