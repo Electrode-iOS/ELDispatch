@@ -108,11 +108,11 @@ class DispatchTimerTests: XCTestCase {
         }
         
         do {
-            try self.waitForConditionsWithTimeout(1) {
+            try self.waitForConditionsWithTimeout(3) {
                 return testValue > 2
             }
         } catch {
-            XCTAssertTrue(false, "Timed out waiting for repetition")
+            XCTFail("Timed out waiting for repetition")
         }
         
         XCTAssertTrue(testValue > 2)
