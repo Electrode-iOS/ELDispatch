@@ -4,4 +4,4 @@ osx_image: xcode8
 install: 
   - git clone https://github.com/Electrode-iOS/ELFoundation.git ../ELFoundation
 script:
-  - xctool -project ELDispatch.xcodeproj -scheme ELDispatch -sdk iphonesimulator build test
+  - xcodebuild -project ELDispatch.xcodeproj -scheme ELDispatch -sdk iphonesimulator test -destination 'platform=iOS Simulator,name=iPhone 6,OS=10.0'
