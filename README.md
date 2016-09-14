@@ -1,7 +1,7 @@
 # ELDispatch 
 
 [![Version](https://img.shields.io/badge/version-v1.0.1-blue.svg)](https://github.com/Electrode-iOS/ELDispatch/releases/latest)
-[![Build Status](https://travis-ci.org/Electrode-iOS/ELDispatch.svg)](https://travis-ci.org/Electrode-iOS/ELDispatch)
+[![Build Status](https://travis-ci.org/Electrode-iOS/ELDispatch.svg?branch=master)](https://travis-ci.org/Electrode-iOS/ELDispatch)
 
 ELDispatch is a Swift framework that provides useful Swift language constructs to oft-used Grand Central Dispatch patterns such as Queues, Groups, Timer, Semaphore, etc.
 
