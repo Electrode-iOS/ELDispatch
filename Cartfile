@@ -1,1 +1,1 @@
-github "Electrode-iOS/ELFoundation"
+github "Electrode-iOS/ELFoundation" ~> 1.0.0
