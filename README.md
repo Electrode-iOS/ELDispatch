@@ -1,6 +1,6 @@
 # ELDispatch 
 
-[![Version](https://img.shields.io/badge/version-v1.1.0-blue.svg)](https://github.com/Electrode-iOS/ELDispatch/releases/latest)
+[![Version](https://img.shields.io/badge/version-v1.1.1-blue.svg)](https://github.com/Electrode-iOS/ELDispatch/releases/latest)
 [![Build Status](https://travis-ci.org/Electrode-iOS/ELDispatch.svg?branch=master)](https://travis-ci.org/Electrode-iOS/ELDispatch)
 
 ELDispatch is a Swift framework that provides useful Swift language constructs to oft-used Grand Central Dispatch patterns such as Queues, Groups, Timer, Semaphore, etc.
@@ -11,15 +11,19 @@ Grand Central Dispatch is a powerful library, but it can easily be difficult for
 
 ELDispatch requires Swift 2.3, Xcode 8 and depends on [`ELFoundation.framework`](https://github.com/Electrode-iOS/ELFoundation).
 
-[Electrode-iOS](https://github.com/Electrode-iOS/) frameworks are designed to live side-by-side in the file system, like so:
-
-* \MyProject
-* \MyProject\ELFoundation
-* \MyProject\ELDispatch
-
 ## Installation
 
-Install by adding `ELDispatch.xcodeproj` to your project and configuring your target to link `ELDispatch.framework`.
+### Carthage
+
+Install with [Carthage](https://github.com/Carthage/Carthage) by adding the framework to your project's [Cartfile](https://github.com/Carthage/Carthage/blob/master/Documentation/Artifacts.md#cartfile).
+
+```
+github "Electrode-iOS/ELDispatch"
+```
+
+### Manual
+
+Install manually by adding `ELDispatch.xcodeproj` to your project and configuring your target to link `ELDispatch.framework`.
 
 ## Getting Started
 
