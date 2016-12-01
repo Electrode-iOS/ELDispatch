@@ -31,7 +31,6 @@ The following constructs have been implemented:
 * `DispatchQueue`: An abstraction of the `dispatc_queue_*` APIs.
 * `DispatchClosure`: An abstraction of the `dispatch_block_*` APIs.
 * `DispatchGroup`: An abstraction of the `dispatch_group_*` APIs.
-* `DispatchTimer`: A struct implementing a GCD timer using the `dispatch_source_*` APIs.
 * `DispatchSemaphore`: An abstraction of the `dispatch_semaphore_*` APIs.
 
 ## Common Usage
