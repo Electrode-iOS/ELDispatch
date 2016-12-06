@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		001EC91A1A92AC15007BC6C4 /* DispatchSemaphore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001EC9191A92AC15007BC6C4 /* DispatchSemaphore.swift */; };
-		001EC91E1A92D437007BC6C4 /* ELDispatchSemaphoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001EC91D1A92D437007BC6C4 /* ELDispatchSemaphoreTests.swift */; };
 		220E9EB51B8BE58E000863F6 /* ELFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 220E9EAE1B8BE44D000863F6 /* ELFoundation.framework */; };
 		2285B18E1B0AA7990088B07B /* ELFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2285B1891B0A9C600088B07B /* ELFoundation.framework */; };
 		CA0CEA6F1A8A877200DF93E9 /* ELDispatch.h in Headers */ = {isa = PBXBuildFile; fileRef = CA0CEA6E1A8A877200DF93E9 /* ELDispatch.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -67,8 +65,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		001EC9191A92AC15007BC6C4 /* DispatchSemaphore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DispatchSemaphore.swift; sourceTree = "<group>"; };
-		001EC91D1A92D437007BC6C4 /* ELDispatchSemaphoreTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ELDispatchSemaphoreTests.swift; sourceTree = "<group>"; };
 		220E9EA61B8BE44D000863F6 /* ELFoundation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ELFoundation.xcodeproj; path = ../ELFoundation/ELFoundation.xcodeproj; sourceTree = "<group>"; };
 		2285B1891B0A9C600088B07B /* ELFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ELFoundation.framework; path = Carthage/Build/iOS/ELFoundation.framework; sourceTree = "<group>"; };
 		CA0CEA691A8A877200DF93E9 /* ELDispatch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ELDispatch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -165,7 +161,6 @@
 				CA0CEA851A8A8B0D00DF93E9 /* DispatchQueue.swift */,
 				CA58B25E1A91B1C000C4B93E /* DispatchClosure.swift */,
 				CA32AD851A91C5FF002FD1B9 /* DispatchGroup.swift */,
-				001EC9191A92AC15007BC6C4 /* DispatchSemaphore.swift */,
 				CA0CEA6C1A8A877200DF93E9 /* Supporting Files */,
 			);
 			path = ELDispatch;
@@ -184,7 +179,6 @@
 			children = (
 				CA8804341A96309700C00CAE /* XCTestExtensions */,
 				CA0CEA7B1A8A877200DF93E9 /* ELDispatchTests.swift */,
-				001EC91D1A92D437007BC6C4 /* ELDispatchSemaphoreTests.swift */,
 				CA0CEA791A8A877200DF93E9 /* Supporting Files */,
 			);
 			path = ELDispatchTests;
@@ -358,7 +352,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				001EC91A1A92AC15007BC6C4 /* DispatchSemaphore.swift in Sources */,
 				CA0CEA861A8A8B0D00DF93E9 /* DispatchQueue.swift in Sources */,
 				CA58B25F1A91B1C000C4B93E /* DispatchClosure.swift in Sources */,
 				CA32AD861A91C5FF002FD1B9 /* DispatchGroup.swift in Sources */,
@@ -370,7 +363,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				001EC91E1A92D437007BC6C4 /* ELDispatchSemaphoreTests.swift in Sources */,
 				CA88043D1A96310D00C00CAE /* XCTestCase+Exceptions.m in Sources */,
 				CA0CEA7C1A8A877200DF93E9 /* ELDispatchTests.swift in Sources */,
 			);

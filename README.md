@@ -31,7 +31,6 @@ The following constructs have been implemented:
 * `DispatchQueue`: An abstraction of the `dispatc_queue_*` APIs.
 * `DispatchClosure`: An abstraction of the `dispatch_block_*` APIs.
 * `DispatchGroup`: An abstraction of the `dispatch_group_*` APIs.
-* `DispatchSemaphore`: An abstraction of the `dispatch_semaphore_*` APIs.
 
 ## Common Usage
 
@@ -90,10 +89,7 @@ if group.wait(10) == true {
 }
 ```
 
-Execute an asynchronous task, synchronously with a Semaphore:
-```Swift
-let semaphore = DispatchSemaphore(initialValue: 0)
-        
+    
 // start a NSURLSession to get some data from our imaginary command line tool.
 let task = session.dataTaskWithRequest(request) { (data, response, error) -> Void in
     if data != nil {
