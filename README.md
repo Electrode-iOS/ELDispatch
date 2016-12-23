@@ -3,6 +3,8 @@
 [![Version](https://img.shields.io/badge/version-v1.1.1-blue.svg)](https://github.com/Electrode-iOS/ELDispatch/releases/latest)
 [![Build Status](https://travis-ci.org/Electrode-iOS/ELDispatch.svg?branch=master)](https://travis-ci.org/Electrode-iOS/ELDispatch)
 
+**Note:** This framework is no longer being actively maintained and will not be updated for future versions of Swift or iOS.
+
 ELDispatch is a Swift framework that provides useful Swift language constructs to oft-used Grand Central Dispatch patterns such as Queues, Groups, Timer, Semaphore, etc.
 
 Grand Central Dispatch is a powerful library, but it can easily be difficult for someone to grasp how to use it well. With Swift, we can provide language constructs such as enumerations to allow dispatching closures to various prenamed priorities, such as .Background. We can also make using GCD groups easier through function chaining.
